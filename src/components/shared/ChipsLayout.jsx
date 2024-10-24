@@ -31,9 +31,13 @@ const ChipsLayout = ({
       >
         {chipsData.map((chip, index) => (
           <React.Fragment key={index}>
-            <div className={`font-satoshi-bold ${chipStyle} col-span-5`}>
-              <p className={subjectStyle}>{chip.subject}</p>
-              <p className={pointStyle}>{chip.point}</p>
+            <div className="flex flex-col gap-y-4 items-center col-span-5">
+              <chip.Icon size={48} />
+
+              <div className={`font-semibold ${chipStyle}`}>
+                <p className={subjectStyle}>{chip.subject}</p>
+                <p className={pointStyle}>{chip.point}</p>
+              </div>
             </div>
 
             {isMobile ? (

@@ -9,8 +9,7 @@ function TrackCard({
   description,
   selected = false,
   onClick,
-  children,
-  textClass = "",
+  children = "",
 }) {
   return (
     <>
@@ -24,12 +23,7 @@ function TrackCard({
         onClick={onClick}
       >
         <div className="flex items-center gap-x-6">
-          <span
-            className={cn(
-              "font-satoshi-medium text-xl text-quaternary",
-              textClass
-            )}
-          >
+          <span className={cn("font-satoshi-medium text-xl text-quaternary")}>
             {iteration}
           </span>
 
@@ -37,8 +31,7 @@ function TrackCard({
             <h4
               className={cn(
                 "font-medium text-lg text-gray-500 group-hover:text-quaternary",
-                { "!text-quaternary": selected },
-                textClass
+                { "!text-quaternary": selected }
               )}
             >
               {title}
@@ -59,25 +52,18 @@ function TrackCard({
 
         <MdOutlineKeyboardArrowRight
           size={32}
-          className={cn(
-            "text-gray-500 group-hover:text-quaternary",
-            {
-              "hidden xl:block xl:!text-quaternary": selected,
-              block: !selected,
-            },
-            textClass
-          )}
+          className={cn("text-gray-500 group-hover:text-quaternary", {
+            "hidden xl:block xl:!text-quaternary": selected,
+            block: !selected,
+          })}
         />
 
         <FiMinus
           size={32}
-          className={cn(
-            {
-              "text-gray-500 xl:hidden": selected,
-              hidden: !selected,
-            },
-            textClass
-          )}
+          className={cn({
+            "text-gray-500 xl:hidden": selected,
+            hidden: !selected,
+          })}
         />
       </div>
 

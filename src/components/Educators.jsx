@@ -4,6 +4,8 @@ import SliderComponent from "./shared/CustomSlider";
 import Link from "next/link";
 import Image from "next/image";
 import { educatorsData } from "@/utils/constant";
+import { FaQuoteRight } from "react-icons/fa";
+import { FaQuoteLeft } from "react-icons/fa";
 
 const Educators = () => {
   return (
@@ -72,7 +74,7 @@ function EducatorsCard({
   profile,
 }) {
   return (
-    <div className="flex flex-col items-center gap-y-4 rounded-xl py-6 px-4 overflow-hidden bg-grayshade border border-[#E5E7EB] h-full">
+    <div className="flex flex-col items-center gap-y-4 rounded-xl py-6 px-4 overflow-hidden bg-slate-100 border border-slate-300 h-full">
       <div className="w-56 h-56 rounded-full bg-red-100 col-span-3 md:col-span-2 overflow-hidden relative">
         {profile === null ? (
           <div className="bg-red-300 w-full h-full flex items-center justify-center">
@@ -99,7 +101,13 @@ function EducatorsCard({
 
         <p className="text-base font-medium text-gray-600">{description}</p>
 
-        <p className="text-gray-700 italic text-right">{quote}</p>
+        <p className="text-gray-700 italic self-start font-semibold flex items-baseline gap-x-2 relative justify-start">
+          <span className="pl-8">{quote}</span>
+          <FaQuoteLeft
+            size={16}
+            className="text-gray-400 absolute -top-2 self-end"
+          />
+        </p>
       </div>
     </div>
   );

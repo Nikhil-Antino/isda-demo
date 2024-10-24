@@ -1,6 +1,15 @@
 import { AiOutlineCheckCircle } from "react-icons/ai";
 import { RiFileTextLine } from "react-icons/ri";
 
+import { FaBriefcase } from "react-icons/fa6";
+import { AiOutlineGlobal } from "react-icons/ai";
+
+import { BsLaptop } from "react-icons/bs";
+import { IoMdSettings } from "react-icons/io";
+import { IoShieldCheckmark } from "react-icons/io5";
+import { BiSupport } from "react-icons/bi";
+import { LiaSearchSolid } from "react-icons/lia";
+
 export const eligiblityData = [
   {
     title: "Apply Online",
@@ -208,21 +217,29 @@ export const jobStats = [
   {
     subject: "Hiring Partners",
     point: "400+",
+    logoPath: null,
+    Icon: FaBriefcase,
+  },
+
+  {
+    subject: "Average Time to Job",
+    point: "15 weeks",
+    logoPath: "/images/logo/rush.svg",
+    Icon: null,
   },
 
   {
     subject: "Successful transitions for Freshers",
     point: "3000+",
+    logoPath: "/images/logo/leadership.svg",
+    Icon: null,
   },
 
   {
     subject: "High Demand Business Roles across Global Companies",
     point: "50+",
-  },
-
-  {
-    subject: "weeks Average Time to Job",
-    point: "15",
+    logoPath: null,
+    Icon: AiOutlineGlobal,
   },
 ];
 
@@ -286,6 +303,7 @@ export const educatorsData = [
 
 export const jobCurriculumData = [
   {
+    Icon: IoMdSettings,
     track: "Logistics & Operations Roles",
     trackData: [
       {
@@ -293,8 +311,14 @@ export const jobCurriculumData = [
         title: "Logistics Coordinator",
         industries: ["Manufacturing", "Retail", "Logistics"],
         stats: [
-          "3000+ Logistics Coordinators hired this year",
-          "Average Salary: INR 4.0 LPA",
+          {
+            subject: "3000+",
+            point: "hired this year",
+          },
+          {
+            subject: "4.0 LPA",
+            point: "Average Salary",
+          },
         ],
         companies: ["1", "2", "7"],
       },
@@ -303,8 +327,14 @@ export const jobCurriculumData = [
         title: "Operations Support Executive",
         industries: ["Corporate Offices", "Logistics", "Service Companies"],
         stats: [
-          "1800+ Operations Support Executives hired this year",
-          "Average Salary: INR 3.8 LPA",
+          {
+            subject: "1800+",
+            point: "hired this year",
+          },
+          {
+            subject: "3.8 LPA",
+            point: "Average Salary",
+          },
         ],
         companies: ["1", "2", "5"],
       },
@@ -312,6 +342,7 @@ export const jobCurriculumData = [
   },
 
   {
+    Icon: BsLaptop,
     track: "Business Executive Roles",
     trackData: [
       {
@@ -319,8 +350,14 @@ export const jobCurriculumData = [
         title: "Business Process Associate",
         industries: ["Large Corporations", "Growing Startups"],
         stats: [
-          "2500+ Business Process Associates hired this year",
-          "Average Salary: INR 4.5 LPA",
+          {
+            subject: "2500+",
+            point: "hired this year",
+          },
+          {
+            subject: "4.5 LPA",
+            point: "Average Salary",
+          },
         ],
         companies: ["1", "2", "11"],
       },
@@ -329,8 +366,14 @@ export const jobCurriculumData = [
         title: "Transaction Processing Officer",
         industries: ["Banking, Insurance", "Payment Gateways"],
         stats: [
-          "1300+ Transaction Processing Officers hired this year",
-          "Average Salary: INR 4.0 LPA",
+          {
+            subject: "1300+",
+            point: "hired this year",
+          },
+          {
+            subject: "4.0 LPA",
+            point: "Average Salary",
+          },
         ],
         companies: ["16", "13", "14"],
       },
@@ -338,6 +381,7 @@ export const jobCurriculumData = [
   },
 
   {
+    Icon: IoShieldCheckmark,
     track: "Data & Risk Management Roles",
     trackData: [
       {
@@ -345,8 +389,14 @@ export const jobCurriculumData = [
         title: "Data Associate",
         industries: ["Retail, Logistics", "Corporate Services"],
         stats: [
-          "2000+ Data Associates hired this year",
-          "Average Salary: INR 4.2 LPA",
+          {
+            subject: "2000+",
+            point: "hired this year",
+          },
+          {
+            subject: "4.2 LPA",
+            point: "Average Salary",
+          },
         ],
         companies: ["1", "2", "4"],
       },
@@ -355,8 +405,14 @@ export const jobCurriculumData = [
         title: "Transaction Risk Investigator",
         industries: ["E-commerce, Fintech", "Financial Services"],
         stats: [
-          "1500+ Transaction Risk Investigators hired this year",
-          "Average Salary: INR 4.6 LPA",
+          {
+            subject: "1500+",
+            point: "hired this year",
+          },
+          {
+            subject: "4.6 LPA",
+            point: "Average Salary",
+          },
         ],
         companies: ["1", "20", "11"],
       },
@@ -364,6 +420,7 @@ export const jobCurriculumData = [
   },
 
   {
+    Icon: BiSupport,
     track: "Customer Management",
     trackData: [
       {
@@ -371,8 +428,14 @@ export const jobCurriculumData = [
         title: "Customer Support Executive",
         industries: ["E-commerce", "Tech Support", "Telecom"],
         stats: [
-          "2000+ Customer Support Executives hired this year",
-          "Average Salary: INR 3.5 LPA",
+          {
+            subject: "2000+",
+            point: "hired this year",
+          },
+          {
+            subject: "3.5 LPA",
+            point: "Average Salary",
+          },
         ],
         companies: ["1", "2", "12"],
       },
@@ -380,6 +443,7 @@ export const jobCurriculumData = [
   },
 
   {
+    Icon: LiaSearchSolid,
     track: "Compliance & Product Roles",
     trackData: [
       {
@@ -387,8 +451,14 @@ export const jobCurriculumData = [
         title: "Compliance Specialist",
         industries: ["Finance, Healthcare", "Corporate Services"],
         stats: [
-          "1200+ Compliance Specialists hired this year",
-          "Average Salary: INR 4.8 LPA",
+          {
+            subject: "1200+",
+            point: "hired this year",
+          },
+          {
+            subject: "4.8 LPA",
+            point: "Average Salary",
+          },
         ],
         companies: ["1", "2", "17"],
       },
@@ -398,8 +468,14 @@ export const jobCurriculumData = [
         title: "Product Compliance Associate",
         industries: ["E-commerce", "Manufacturing", "Tech"],
         stats: [
-          "1500+ Product Compliance Associates hired this year",
-          "Average Salary: INR 5.0 LPA",
+          {
+            subject: "1500+",
+            point: "hired this year",
+          },
+          {
+            subject: "5.0 LPA",
+            point: "Average Salary",
+          },
         ],
         companies: ["1", "2", "11"],
       },

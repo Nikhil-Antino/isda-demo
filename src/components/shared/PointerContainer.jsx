@@ -21,13 +21,21 @@ const PointerContainer = ({
       </div>
     )}
     <div
-      className={cn("flex flex-col gap-y-4 md:mt-2", {
+      className={cn("flex flex-col gap-y-2 md:mt-2", {
         "col-span-1": end,
         "col-span-1": !end,
       })}
     >
-      {title && <h3 className="text-xl md:text-2xl font-semibold">{title}</h3>}
-      {description && <p className="pb-[16px] leading-5">{description}</p>}
+      {title && (
+        <h3
+          className={cn("text-xl md:text-2xl font-semibold", {
+            "pb-6": !description,
+          })}
+        >
+          {title}
+        </h3>
+      )}
+      {description && <p className="pb-6 leading-5">{description}</p>}
       {children}
     </div>
   </div>

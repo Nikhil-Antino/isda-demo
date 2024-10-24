@@ -2,22 +2,31 @@ import React from "react";
 import ChipsLayout from "./shared/ChipsLayout";
 import useMediaQuery from "@/utils/hooks/useMediaQuery";
 
+import { FaCalendarDays } from "react-icons/fa6";
+import { PiClockCountdownFill } from "react-icons/pi";
+import { IoShieldCheckmarkSharp } from "react-icons/io5";
+import { IoWalletSharp } from "react-icons/io5";
+
 const chipsData = [
   {
     point: "Next Batch Starts",
     subject: "25 Nov, 2024",
+    Icon: FaCalendarDays,
   },
   {
-    point: "Program Duration",
+    point: "Avereage Time to Job",
     subject: "12 Weeks",
+    Icon: PiClockCountdownFill,
   },
   {
-    point: "Learning Format",
-    subject: "Live, Online, Expert-Led Sessions",
+    point: "Job guarantee upon completion",
+    subject: "100% Guarantee",
+    Icon: IoShieldCheckmarkSharp,
   },
   {
-    point: "Placement Guarantee",
-    subject: "100% Job Guarantee Upon Completion",
+    point: "Average Salary",
+    subject: "4.0 LPA",
+    Icon: IoWalletSharp,
   },
 ];
 
@@ -30,9 +39,9 @@ function Statistics() {
         <ChipsLayout
           chipsData={chipsData}
           customStyle="pb-[16px]"
-          chipStyle="flex flex-col items-center gap-y-[12px]"
-          pointStyle="font-regular text-base text-gray-500 text-center"
-          subjectStyle="font-semibold text-lg text-center"
+          chipStyle="flex flex-col items-center gap-y-1"
+          pointStyle="font-regular text-sm text-gray-500 text-center"
+          subjectStyle="font-semibold text-xl text-center"
           isMobile={isMobile}
         />
       </div>
