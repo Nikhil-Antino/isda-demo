@@ -14,7 +14,7 @@ function JobSection() {
 
   return (
     // bg-[url('/images/background/1.png')] bg-contain bg-center
-    <section className="w-full pt-36 pb-40 px-4 bg-[#FCFCFD]">
+    <section className="w-full pt-24 pb-40 px-4 bg-[#FCFCFD]">
       <div className="md:max-w-[1360px] md:mx-auto flex flex-col items-center gap-y-16">
         <div className="flex flex-col gap-y-2 items-center overflow-hidden">
           <Badge customStyle={"flex items-center gap-x-1 mb-4"}>Overview</Badge>

@@ -75,7 +75,11 @@ function EducatorsCard({
     <div className="flex flex-col items-center gap-y-4 rounded-xl py-6 px-4 overflow-hidden bg-grayshade border border-[#E5E7EB] h-full">
       <div className="w-56 h-56 rounded-full bg-red-100 col-span-3 md:col-span-2 overflow-hidden relative">
         {profile === null ? (
-          <div className="bg-red-100 w-20 h-20" />
+          <div className="bg-red-300 w-full h-full flex items-center justify-center">
+            <p className="text-white text-7xl font-white">
+              {name?.slice(0, 1)}
+            </p>
+          </div>
         ) : (
           <Image src={profile} objectFit="cover" layout="fill" alt="student" />
         )}
