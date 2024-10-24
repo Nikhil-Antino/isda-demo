@@ -10,6 +10,7 @@ function TrackCard({
   selected = false,
   onClick,
   children,
+  textClass = "",
 }) {
   return (
     <>
@@ -23,15 +24,21 @@ function TrackCard({
         onClick={onClick}
       >
         <div className="flex items-center gap-x-6">
-          <span className="font-satoshi-medium text-xl text-quaternary">
+          <span
+            className={cn(
+              "font-satoshi-medium text-xl text-quaternary",
+              textClass
+            )}
+          >
             {iteration}
           </span>
 
           <div className="flex flex-col gap-y-1">
             <h4
               className={cn(
-                "font-medium text-lg text-gray-400 group-hover:text-quaternary",
-                { "!text-quaternary": selected }
+                "font-medium text-lg text-gray-500 group-hover:text-quaternary",
+                { "!text-quaternary": selected },
+                textClass
               )}
             >
               {title}
@@ -40,7 +47,7 @@ function TrackCard({
             {description && (
               <p
                 className={cn(
-                  "font-satoshi-normal text-[14px] leading-5 text-gray-400 group-hover:text-gray-2 md:text-[16px] md:leading-6",
+                  "font-satoshi-normal text-[14px] leading-5 text-gray-500 group-hover:text-gray-2 md:text-[16px] md:leading-6",
                   { "!text-gray-2": selected }
                 )}
               >
@@ -52,18 +59,25 @@ function TrackCard({
 
         <MdOutlineKeyboardArrowRight
           size={32}
-          className={cn("text-gray-400 group-hover:text-quaternary", {
-            "hidden xl:block xl:!text-quaternary": selected,
-            block: !selected,
-          })}
+          className={cn(
+            "text-gray-500 group-hover:text-quaternary",
+            {
+              "hidden xl:block xl:!text-quaternary": selected,
+              block: !selected,
+            },
+            textClass
+          )}
         />
 
         <FiMinus
           size={32}
-          className={cn({
-            "text-gray-400 xl:hidden": selected,
-            hidden: !selected,
-          })}
+          className={cn(
+            {
+              "text-gray-500 xl:hidden": selected,
+              hidden: !selected,
+            },
+            textClass
+          )}
         />
       </div>
 

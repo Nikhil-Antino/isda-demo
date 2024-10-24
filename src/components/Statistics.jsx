@@ -25,13 +25,13 @@ function Statistics() {
   const isMobile = useMediaQuery("(max-width: 767.98px)");
 
   return (
-    <section className="w-full pt-36 pb-12 px-4">
+    <section className="w-full pt-28 md:pt-24 pb-8 md:pb-10 px-4">
       <div className="md:max-w-[1360px] mx-auto flex flex-col">
         <ChipsLayout
           chipsData={chipsData}
           customStyle="pb-[16px]"
           chipStyle="flex flex-col items-center gap-y-[12px]"
-          pointStyle="font-regular text-base text-gray-400 text-center"
+          pointStyle="font-regular text-base text-gray-500 text-center"
           subjectStyle="font-semibold text-lg text-center"
           isMobile={isMobile}
         />

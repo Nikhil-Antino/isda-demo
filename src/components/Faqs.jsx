@@ -26,7 +26,7 @@ const FAQ = () => {
             </span>
           </h2>
 
-          <p className="text-center font-satoshi-regular text-[18px] leading-7 text-gray-400">
+          <p className="text-center font-satoshi-regular text-[18px] leading-7 text-gray-600">
             Everything you need to know about the courses, tuition fees, etc.
           </p>
         </div>

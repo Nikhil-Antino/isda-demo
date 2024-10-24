@@ -61,7 +61,7 @@ const successStoriesData = [
 
 function SuccessStories() {
   return (
-    <section className="w-full flex items-center justify-center pt-24 pb-40 px-4">
+    <section className="w-full flex items-center justify-center py-16 md:py-24 px-4">
       <div className="md:max-w-[1360px] flex flex-col gap-y-16 w-full items-center">
         <div className="flex flex-col gap-y-2 items-center">
           <Badge customStyle={"flex items-center gap-x-1 mb-4"}>
@@ -73,7 +73,7 @@ function SuccessStories() {
               Itself
             </span>
           </h2>
-          <p className="text-sm md:text-lg text-gray-400 text-center">
+          <p className="text-sm md:text-lg text-gray-600 text-center">
             Alumni share their journeys to top companies through short, engaging
             video testimonials.
           </p>

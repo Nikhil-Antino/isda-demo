@@ -14,7 +14,7 @@ import Rating from "../shared/Rating";
 function HeroBanner() {
   return (
     <section className="bg-primary-dark w-full flex flex-col justify-center items-center relative">
-      <div className="lg:max-w-[1360px] grid lg:grid-cols-12 pt-12 pb-44 px-4 items-center">
+      <div className="lg:max-w-[1360px] grid lg:grid-cols-12 pt-12 pb-44 px-4 items-center w-full">
         <div className="lg:col-span-7 flex flex-col gap-y-12">
           <div className="flex flex-col gap-y-4">
             <h1 className="text-white text-2xl lg:text-4xl">
@@ -34,16 +34,20 @@ function HeroBanner() {
               <p>Business Roles</p>
             </h1>
 
-            <p className="text-sm lg:text-lg text-white font-regular">
-              Master Client Relationship, negotiations, Product Pitch, business
-              analytics, and GenAI skills. Secure guaranteed jobs at top global
-              companies, confidently
+            <p className="text-base lg:text-lg text-white font-regular flex flex-col items-start">
+              <span>Step into global careers, confidently!</span>
+              <span>
+                Master Client Management, Negotiation Skills, and Business
+                Analytics with GenAI.
+              </span>
             </p>
           </div>
 
           <div className="hidden lg:flex items-center gap-4">
-            <SecondaryButton>Check Your Eligibility!</SecondaryButton>
-            <PrimaryButton>Download Brochure!</PrimaryButton>
+            <SecondaryButton size={"large"}>
+              Check Your Eligibility!
+            </SecondaryButton>
+            <PrimaryButton size={"large"}>Download Brochure!</PrimaryButton>
           </div>
 
           <div className="flex lg:hidden items-center gap-4">
@@ -59,41 +63,41 @@ function HeroBanner() {
           <div className="flex items-center flex-wrap justify-between lg:justify-start gap-y-4 gap-x-6 text-white">
             <div className="flex items-center gap-x-2">
               <span className="p-1 rounded-full border border-secondary">
-                <AiFillStar size={20} className="text-secondary" />
+                <AiFillStar size={24} className="text-secondary" />
               </span>
 
               <div className="flex flex-col gap-y-1">
                 <div className="h-full">
-                  <Rating rating={4.8} numberOfStars={5} />
+                  <Rating rating={4.8} numberOfStars={5} starDimension="18px" />
                 </div>
-                <p className="text-xs">Rated 4.8/5</p>
+                <p className="text-sm">Rated 4.8/5</p>
               </div>
             </div>
 
             <div className="flex items-center gap-x-2">
               <span className="p-1 rounded-full border border-secondary">
-                <MdBusinessCenter size={20} className="text-secondary" />
+                <MdBusinessCenter size={24} className="text-secondary" />
               </span>
 
               <div className="flex flex-col gap-y-1">
-                <p className="text-sm font-semibold">400+</p>
-                <p className="text-xs">Partner Companies</p>
+                <p className="text-base font-semibold">400+</p>
+                <p className="text-sm">Partner Companies</p>
               </div>
             </div>
 
             <div className="flex items-center gap-x-2">
               <span className="p-1 rounded-full border border-secondary">
-                <IoIosPeople size={20} className="text-secondary" />
+                <IoIosPeople size={24} className="text-secondary" />
               </span>
 
               <div className="flex flex-col gap-y-1">
-                <p className="text-sm font-semibold">1000+</p>
-                <p className="text-xs">Student Placed</p>
+                <p className="text-base font-semibold">1000+</p>
+                <p className="text-sm">Student Placed</p>
               </div>
             </div>
           </div>
 
-          <div className="text-white flex flex-col gap-y-4">
+          {/* <div className="text-white flex flex-col gap-y-4">
             <p className="text-lg lg:text-xl font-semibold">
               Global Assessment Partners
             </p>
@@ -101,7 +105,7 @@ function HeroBanner() {
             <p className="text-base lg:text-lg font-medium">
               DoSelect by Naukri | HirePro | Versant by Pearson
             </p>
-          </div>
+          </div> */}
           {/* 
           <div className="text-white flex flex-col gap-y-4">
             <p className="text-lg lg:text-xl font-semibold">
@@ -143,7 +147,7 @@ function HeroCenterBoarder() {
           Our Hiring Partners –{" "}
           <span className="text-primary">Leading Global Companies</span>
         </h2>
-        <p className="text-sm lg:text-lg text-gray-400 text-center">
+        <p className="text-sm lg:text-lg text-gray-600 text-center">
           Trusted by the world’s top companies to hire job-ready professionals.
         </p>
       </div>

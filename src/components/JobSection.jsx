@@ -6,15 +6,25 @@ import cn from "classnames";
 import Image from "next/image";
 import { jobCurriculumData } from "@/utils/constant";
 import useMediaQuery from "@/utils/hooks/useMediaQuery";
+import TrackCard from "./shared/TrackCard";
 
 function JobSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const currentTrack = jobCurriculumData[currentIndex];
 
+  const isMobile = useMediaQuery("(max-width: 1279.98px)");
+  const selectTrackHandler = (idx) => {
+    if (currentIndex === idx && isMobile) {
+      setCurrentIndex(-1);
+    } else {
+      setCurrentIndex(idx);
+    }
+  };
+
   return (
     // bg-[url('/images/background/1.png')] bg-contain bg-center
-    <section className="w-full pt-24 pb-40 px-4 bg-[#FCFCFD]">
+    <section className="w-full py-16 md:pt-24 md:pb-40 px-4 bg-[#FCFCFD]">
       <div className="md:max-w-[1360px] md:mx-auto flex flex-col items-center gap-y-16">
         <div className="flex flex-col gap-y-2 items-center overflow-hidden">
           <Badge customStyle={"flex items-center gap-x-1 mb-4"}>Overview</Badge>
@@ -25,21 +35,23 @@ function JobSection() {
               Job Roles
             </span>
           </h2>
-          <p className="text-sm md:text-lg text-gray-400 text-center">
+          <p className="text-sm md:text-lg text-gray-600 text-center">
             Find the right career path for you by exploring various roles
             offered by Global companies.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-5 items-start w-full">
+        <div className="grid md:grid-cols-5 gap-x-4 items-start w-full">
           <div className="flex flex-col items-start gap-y-2 md:col-span-2">
             {jobCurriculumData.map((track, index) => (
               <TrackCard
                 key={index}
-                trackTitle={track.track}
-                currentIndex={currentIndex}
-                setCurrentIndex={setCurrentIndex}
-                index={index}
+                iteration={Number(index + 1).toLocaleString("en-IN", {
+                  minimumIntegerDigits: 2,
+                })}
+                title={track.track}
+                selected={currentIndex === index}
+                onClick={() => selectTrackHandler(index)}
               >
                 <div
                   className={cn("grid gap-y-6 md:hidden", {
@@ -82,41 +94,41 @@ function JobSection() {
 
 export default JobSection;
 
-function TrackCard({
-  trackTitle,
-  currentIndex,
-  setCurrentIndex,
-  index,
-  children,
-}) {
-  const isMobile = useMediaQuery("(max-width: 1279.98px)");
-  const selectTrackHandler = (idx) => {
-    if (currentIndex === idx && isMobile) {
-      setCurrentIndex(-1);
-    } else {
-      setCurrentIndex(idx);
-    }
-  };
+// function TrackCard({
+//   trackTitle,
+//   currentIndex,
+//   setCurrentIndex,
+//   index,
+//   children,
+// }) {
+//   const isMobile = useMediaQuery("(max-width: 1279.98px)");
+//   const selectTrackHandler = (idx) => {
+//     if (currentIndex === idx && isMobile) {
+//       setCurrentIndex(-1);
+//     } else {
+//       setCurrentIndex(idx);
+//     }
+//   };
 
-  return (
-    <div className="flex flex-col gap-y-4 items-start w-full">
-      <button
-        className={cn(
-          "py-4 px-4 md:pl-8 outline-none ring-0 md:!border-l-4 w-full text-start",
-          {
-            "text-primary md:border-primary": currentIndex === index,
-            "text-[#76767A]": currentIndex !== index,
-          }
-        )}
-        onClick={() => selectTrackHandler(index)}
-      >
-        <h3 className="text-xl font-semibold">{trackTitle}</h3>
-      </button>
+//   return (
+//     <div className="flex flex-col gap-y-4 items-start w-full">
+//       <button
+//         className={cn(
+//           "py-4 px-4 md:pl-8 outline-none ring-0 md:!border-l-4 w-full text-start",
+//           {
+//             "text-primary md:border-primary": currentIndex === index,
+//             "text-[#76767A]": currentIndex !== index,
+//           }
+//         )}
+//         onClick={() => selectTrackHandler(index)}
+//       >
+//         <h3 className="text-xl font-semibold">{trackTitle}</h3>
+//       </button>
 
-      {children}
-    </div>
-  );
-}
+//       {children}
+//     </div>
+//   );
+// }
 
 function DetailCard({
   title,

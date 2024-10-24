@@ -33,8 +33,8 @@ function HowItWorks() {
   };
 
   return (
-    <section className="w-full pt-36 pb-40 px-4">
-      <div className="md:max-w-[1360px] md:mx-auto flex flex-col items-center gap-y-16">
+    <section className="w-full py-16 md:py-36 px-4">
+      <div className="md:max-w-[1360px] md:mx-auto flex flex-col items-center gap-y-10 md:gap-y-16">
         <div className="flex flex-col gap-y-2 items-center overflow-hidden">
           {/* <Badge customStyle={"flex items-center gap-x-1 mb-4"}>Overview</Badge> */}
 
@@ -44,7 +44,7 @@ function HowItWorks() {
               ISDA
             </span>
           </h2>
-          {/* <p className="text-sm md:text-lg text-gray-400 text-center">
+          {/* <p className="text-sm md:text-lg text-gray-600 text-center">
             Find the right career path for you by exploring various roles
             offered by Global companies.
           </p> */}
@@ -106,6 +106,7 @@ function HowItWorks() {
           <PointerContainer
             step={3}
             title={"Get Certified & Receive an Assessment Report"}
+            end={true}
           >
             <div className="grid xl:grid-cols-2 gap-6 items-center">
               <div className="relative bg-[#F9FAFB] p-8 rounded-xl border border-[#E5E7EB]">

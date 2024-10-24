@@ -46,7 +46,7 @@ const whyData = [
 
 function WhySection() {
   return (
-    <section className="w-full pt-36 pb-40 px-4 bg-[#F9FAFB]">
+    <section className="w-full py-16 md:pt-24 md:pb-40 px-4 bg-[#F9FAFB]">
       <div className="md:max-w-[1360px] md:mx-auto flex flex-col items-center gap-y-16">
         <div className="flex flex-col items-center gap-y-2">
           <h2 className="text-xl md:text-3xl font-semibold text-center">
@@ -55,7 +55,7 @@ function WhySection() {
               ISDA?
             </span>
           </h2>
-          {/* <p className="text-sm md:text-lg text-gray-400 text-center">
+          {/* <p className="text-sm md:text-lg text-gray-600 text-center">
             Find the right career path for you by exploring various roles
             offered by Global companies.
           </p> */}

@@ -23,7 +23,7 @@ const Educators = () => {
               learn from?
             </span>
           </h2>
-          <p className="text-sm md:text-lg text-gray-400 text-center">
+          <p className="text-sm md:text-lg text-gray-600 text-center">
             Get taught by educators from top educational institutions and
             companies
           </p>
