@@ -40,7 +40,8 @@ const FAQ = () => {
                   onClick={() => handleItemClick(item)}
                   size={"small"}
                   className={cn({
-                    "bg-blue-600 text-white": active.category === item.category,
+                    "!bg-blue-600 text-white":
+                      active.category === item.category,
                   })}
                 >
                   {item.category}
