@@ -17,7 +17,7 @@ const FAQ = () => {
       className="module bg-[#FCFCFD] py-[64px] px-[16px] md:py-[96px] md:px-[124px]"
       id="FAQs"
     >
-      <div className="flex flex-col items-center gap-y-10 md:max-w-[1360px] md:mx-auto">
+      <div className="flex flex-col items-center gap-y-10 xl:max-w-[1360px] xl:mx-auto">
         <div className="flex flex-col items-center gap-y-[16px] pb-[8px]">
           <h2 className="text-xl md:text-3xl font-semibold text-center">
             Frequently asked{" "}

@@ -35,7 +35,7 @@ function HowItWorks() {
 
   return (
     <section className="w-full py-16 md:py-36 px-4">
-      <div className="md:max-w-[1360px] md:mx-auto flex flex-col items-center gap-y-10 md:gap-y-16">
+      <div className="xl:max-w-[1360px] xl:mx-auto flex flex-col items-center gap-y-10 md:gap-y-16">
         <div className="flex flex-col gap-y-2 items-center overflow-hidden">
           {/* <Badge customStyle={"flex items-center gap-x-1 mb-4"}>Overview</Badge> */}
 
@@ -66,17 +66,26 @@ function HowItWorks() {
             </div>
           </PointerContainer>
 
-          <PointerContainer step={2} title={"Enroll in ISDA’s 12-Week Program"}>
-            <div className="grid xl:grid-cols-5 gap-x-6 items-start pb-12">
-              <div className="flex flex-col items-start gap-y-4 xl:col-span-2">
+          <PointerContainer
+            step={2}
+            title={"Upskill to be ready for Global Companies"}
+            description={
+              "12 Weeks Accelerated Business Executive Program Curated by Top Professionals"
+            }
+          >
+            <div className="grid xl:grid-cols-2 gap-x-6 items-start pb-12">
+              <div className="flex flex-col items-start gap-y-4">
                 {weeksCurriculumData.map((track, index) => (
                   <TrackCard
+                    key={index}
                     iteration={Number(index + 1).toLocaleString("en-IN", {
                       minimumIntegerDigits: 2,
                     })}
                     title={track.track}
                     selected={currentIndex === index}
                     onClick={() => selectTrackHandler(index)}
+                    lectures={track.lectures}
+                    assessments={track.assignments}
                   >
                     <div
                       className={cn("xl:hidden", {
@@ -90,13 +99,14 @@ function HowItWorks() {
                         layoutStyle={"!h-fit"}
                         trackTitle={track.track}
                         factors={track.factors}
+                        description={track.description}
                       />
                     </div>
                   </TrackCard>
                 ))}
               </div>
 
-              <div className="hidden xl:block w-full col-span-3">
+              <div className="hidden xl:block w-full">
                 {currentTrack && (
                   <ProgramDetailCard
                     duration={currentTrack.duration}
@@ -104,6 +114,7 @@ function HowItWorks() {
                     layoutStyle={"!h-fit"}
                     trackTitle={currentTrack.track}
                     factors={currentTrack.factors}
+                    description={currentTrack.description}
                   />
                 )}
               </div>
@@ -125,7 +136,7 @@ function HowItWorks() {
             title={"Job at Global Companies"}
             end={true}
           >
-            <div className="grid md:grid-cols-2 gap-y-6 gap-x-10 py-2 items-center pb-12 relative">
+            <div className="grid lg:grid-cols-2 gap-y-6 gap-x-10 py-2 items-center pb-12 relative">
               <div
                 className="rounded-2xl p-4 xl:p-8 grid grid-cols-2 grid-rows-2 gap-4 xl:gap-6 rounded-xl relative z-10 bg-white"
                 style={{
@@ -138,22 +149,24 @@ function HowItWorks() {
               </div>
 
               <div className="flex flex-col gap-y-6">
-                <h4 className="text-lg md:text-xl font-semibold">
+                <h4 className="text-lg md:text-xl font-semibold text-center">
                   Top Recruiters
                 </h4>
 
                 <div className="grid grid-cols-3 gap-4">
                   {numbArray.map((item) => (
                     <Image
+                      key={item}
                       src={`/images/hiring-partners-logo/${item}.png`}
                       width={100}
                       height={40}
                       objectFit="contain"
+                      alt="Hiring Partners"
                     />
                   ))}
                 </div>
               </div>
-              <div className=" absolute top-40 h-[230px] left-1/3 w-[260px] rounded-full background-gradient blur-[200px] md:h-20 md:w-56"></div>
+              <div className=" absolute top-40 right-0 h-[230px] left-1/3 w-20 rounded-full background-gradient blur-[200px] md:h-20 md:w-56"></div>
             </div>
           </PointerContainer>
         </div>
@@ -169,7 +182,13 @@ function JobStats({ subject, point, logoPath, Icon }) {
     <div className="grid xl:grid-cols-12 gap-x-3 items-center">
       {logoPath ? (
         <div className="w-10 h-10 rounded-full text-quaternary relative flex items-center justify-center xl:col-span-2">
-          <Image src={logoPath} width={100} height={100} objectFit="cover" />
+          <Image
+            src={logoPath}
+            width={100}
+            height={100}
+            objectFit="cover"
+            alt="logo"
+          />
         </div>
       ) : (
         <Icon size={36} className="text-quaternary xl:col-span-2" />
@@ -185,19 +204,20 @@ function JobStats({ subject, point, logoPath, Icon }) {
 
 function CertificateSection() {
   return (
-    <div className="grid xl:grid-cols-12 gap-6 items-center mb-12">
-      <ul className="flex flex-col gap-y-12 col-span-5">
+    <div className="grid lg:grid-cols-12 gap-6 items-center mb-12">
+      <ul className="flex flex-col gap-y-12 lg:col-span-5">
         <li className="grid grid-cols-12 gap-x-4 items-center">
-          <div className="xl:col-span-2 bg-[#f1f5f9] rounded-md p-2 flex items-center justify-center border border-[#E5E7EB]">
+          <div className="col-span-2 bg-[#f1f5f9] rounded-md p-2 flex items-center justify-center border border-[#E5E7EB]">
             <Image
               src={"/images/logo/diploma.svg"}
               width={60}
               height={60}
               objectFit="cover"
+              alt="diploma"
             />
           </div>
 
-          <div className="xl:col-span-10">
+          <div className="col-span-10">
             <h4 className="text-lg font-semibold">
               Globally Recognized Certification
             </h4>
@@ -208,16 +228,17 @@ function CertificateSection() {
         </li>
 
         <li className="grid grid-cols-12 gap-x-4 items-center">
-          <div className="xl:col-span-2 bg-[#f1f5f9] rounded-md p-2 flex items-center justify-center border border-[#E5E7EB]">
+          <div className="col-span-2 bg-[#f1f5f9] rounded-md p-2 flex items-center justify-center border border-[#E5E7EB]">
             <Image
               src={"/images/logo/good-quality.svg"}
               width={60}
               height={60}
               objectFit="cover"
+              alt="good quality"
             />
           </div>
 
-          <div className="xl:col-span-10">
+          <div className="col-span-10">
             <h4 className="text-lg font-semibold">Build a Winning Resume</h4>
             <p className="text-gray-600 text-sm">
               Add credibility and attract top recruiters with your ISDA
@@ -227,16 +248,17 @@ function CertificateSection() {
         </li>
 
         <li className="grid grid-cols-12 gap-x-4 items-center">
-          <div className="xl:col-span-2 bg-[#f1f5f9] rounded-md p-2 flex items-center justify-center border border-[#E5E7EB]">
+          <div className="col-span-2 bg-[#f1f5f9] rounded-md p-2 flex items-center justify-center border border-[#E5E7EB]">
             <Image
               src={"/images/logo/leadership-cert.svg"}
               width={60}
               height={60}
               objectFit="cover"
+              alt="leadership"
             />
           </div>
 
-          <div className="xl:col-span-10">
+          <div className="col-span-10">
             <h4 className="text-lg font-semibold">Stand Out & Get Hired</h4>
             <p className="text-gray-600 text-sm">
               Add ISDA certification to your LinkedIn and attract high-paying
@@ -246,12 +268,13 @@ function CertificateSection() {
         </li>
       </ul>
 
-      <div className="relative bg-[#F9FAFB] p-8 rounded-xl border border-[#E5E7EB] col-start-7 col-span-7 w-fit">
+      <div className="relative bg-[#F9FAFB] p-8 rounded-xl border border-[#E5E7EB] lg:col-start-7 lg:col-span-7 w-fit">
         <Image
           src={"/images/isda-certificate.png"}
           width={450}
           height={280}
           objectFit="contain"
+          alt="certificate"
         />
       </div>
     </div>

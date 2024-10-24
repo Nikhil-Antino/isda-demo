@@ -11,9 +11,9 @@ function Footer() {
   return (
     <footer className="bg-gray-900 text-gray-300 py-12">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {/* Brand Logo */}
-          <div className="flex flex-col items-center md:items-start">
+        <div className="flex flex-col md:flex-row items-center justify-between mb-8">
+          {/* Brand Logo with Description */}
+          <div className="flex flex-col xl:flex-row items-center space-x-4 w-full">
             <Image
               src="/images/logo/7.png"
               alt="logo"
@@ -22,11 +22,31 @@ function Footer() {
               objectFit="contain"
               className="cursor-pointer"
             />
-            <p className="mt-4 text-sm">
-              Building a brighter future through education.
+            <p className="text-sm w-full flex flex-col gap-y-1">
+              <span>
+                At ISDA, we believe in shaping future leaders. As an upskilling
+                platform, co-founded by IIT & IIM alumni, we have developed
+                industry-leading programs across business domains. Our
+                meticulously crafted courses are designed to address the growing
+                need for non-technical roles that drive business growth and
+                decision-making.
+              </span>
+
+              <span>
+                Unlike many platforms focused solely on tech roles, ISDA is
+                dedicated to empowering professionals to excel in high-impact
+                business roles—whether in management, strategy, or
+                operations—where people skills are the key to success. Our
+                students have gone on to secure rewarding positions in
+                industries like consulting, operations, and business executive
+                roles, with significant earning potential and clear career
+                growth trajectories.
+              </span>
             </p>
           </div>
+        </div>
 
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
           {/* Contact Us */}
           <div>
             <h3 className="text-lg font-bold mb-4">Contact Us</h3>
@@ -39,7 +59,7 @@ function Footer() {
           {/* Follow Us */}
           <div>
             <h3 className="text-lg font-bold mb-4">Follow Us</h3>
-            <div className="flex space-x-4">
+            <div className="flex justify-center md:justify-start space-x-4">
               <a href="#" className="hover:text-white">
                 <FaFacebookF />
               </a>

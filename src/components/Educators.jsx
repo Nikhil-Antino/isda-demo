@@ -13,7 +13,7 @@ const Educators = () => {
       id="educators"
       className="px-4 pt-10 pb-16 md:gap-y-12 md:pt-24 md:pb-30"
     >
-      <div className="md:max-w-[1360px] mx-auto flex flex-col items-center gap-y-10">
+      <div className="xl:max-w-[1360px] mx-auto flex flex-col items-center gap-y-10">
         <div className="flex flex-col gap-y-2 items-center overflow-hidden">
           <Badge customStyle={"flex items-center gap-x-1 mb-4"}>
             Educators
@@ -40,6 +40,11 @@ const Educators = () => {
                   slidesPerGroup: 1,
                 },
                 1024: {
+                  slidesPerView: 2,
+                  spaceBetween: 20,
+                  slidesPerGroup: 2,
+                },
+                1280: {
                   slidesPerView: 3,
                   spaceBetween: 32,
                   slidesPerGroup: 3,
@@ -99,7 +104,9 @@ function EducatorsCard({
           </Link>
         </div>
 
-        <p className="text-base font-medium text-gray-600">{description}</p>
+        <p className="text-base font-medium text-gray-600 line-clamp-4">
+          {description}
+        </p>
 
         <p className="text-gray-700 italic self-start font-semibold flex items-baseline gap-x-2 relative justify-start">
           <span className="pl-8">{quote}</span>

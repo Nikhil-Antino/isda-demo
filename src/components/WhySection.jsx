@@ -49,7 +49,7 @@ const whyData = [
 function WhySection() {
   return (
     <section className="w-full py-16 md:pt-24 md:pb-40 px-4 bg-[#F9FAFB]">
-      <div className="md:max-w-[1360px] md:mx-auto flex flex-col items-center gap-y-16">
+      <div className="xl:max-w-[1360px] xl:mx-auto flex flex-col items-center gap-y-16">
         <div className="flex flex-col items-center gap-y-2">
           <h2 className="text-xl md:text-3xl font-semibold text-center">
             Why Choose{" "}
@@ -82,7 +82,13 @@ function FeatureCard({ title, description, logoPath }) {
         className="flex items-center justify-center rounded-[10px] border border-gray-2 bg-white p-[20px]"
         style={{ boxShadow: "0px 1px 2px 0px rgba(16, 24, 40, 0.05)" }}
       >
-        <Image src={logoPath} width={60} height={60} objectFit="cover" />
+        <Image
+          src={logoPath}
+          width={60}
+          height={60}
+          objectFit="cover"
+          alt={title}
+        />
         {/* <Icon size={48} className="text-quaternary" /> */}
       </span>
       <div className="flex flex-col items-center gap-y-[8px]">

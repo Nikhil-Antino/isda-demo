@@ -6,10 +6,11 @@ import cn from "classnames";
 function TrackCard({
   iteration,
   title,
-  description,
   selected = false,
   onClick,
   children = "",
+  lectures,
+  assessments,
 }) {
   return (
     <>
@@ -30,14 +31,32 @@ function TrackCard({
           <div className="flex flex-col gap-y-1">
             <h4
               className={cn(
-                "font-medium text-lg text-gray-500 group-hover:text-quaternary",
+                "font-semibold text-lg text-gray-500 group-hover:text-quaternary",
                 { "!text-quaternary": selected }
               )}
             >
               {title}
             </h4>
 
-            {description && (
+            {lectures && assessments && (
+              <div
+                className={cn("flex items-center gap-x-3", {
+                  "text-gray-600": !selected,
+                  "text-quaternary": selected,
+                })}
+              >
+                <p className="text-sm">Lectures: {lectures}</p>
+                <span
+                  className={cn("h-1.5 w-1.5 rounded-full", {
+                    "bg-quaternary": selected,
+                    "bg-gray-400": !selected,
+                  })}
+                />
+                <p className="text-sm">Assessments: {assessments}</p>
+              </div>
+            )}
+
+            {/* {description && (
               <p
                 className={cn(
                   "font-satoshi-normal text-[14px] leading-5 text-gray-500 group-hover:text-gray-2 md:text-[16px] md:leading-6",
@@ -46,7 +65,7 @@ function TrackCard({
               >
                 {description}
               </p>
-            )}
+            )} */}
           </div>
         </div>
 

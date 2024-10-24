@@ -17,7 +17,7 @@ function JobSection() {
   return (
     // bg-[url('/images/background/1.png')] bg-contain bg-center
     <section className="w-full py-16 md:pt-24 md:pb-40 px-4 bg-[#FCFCFD]">
-      <div className="md:max-w-[1360px] md:mx-auto flex flex-col items-center gap-y-16">
+      <div className="xl:max-w-[1360px] xl:mx-auto flex flex-col items-center gap-y-16">
         <div className="flex flex-col gap-y-2 items-center overflow-hidden">
           <Badge customStyle={"flex items-center gap-x-1 mb-4"}>Overview</Badge>
 
@@ -46,7 +46,7 @@ function JobSection() {
                 Icon={track.Icon}
               >
                 <div
-                  className={cn("grid gap-y-6 md:hidden", {
+                  className={cn("grid gap-y-6 xl:hidden", {
                     hidden: currentIndex !== index,
                     block: currentIndex === index,
                   })}
@@ -127,7 +127,9 @@ function TrackCard({
             })}
           />
 
-          <h3 className="text-xl font-semibold col-span-7">{trackTitle}</h3>
+          <h3 className="text-base lg:text-xl font-semibold col-span-7">
+            {trackTitle}
+          </h3>
         </div>
 
         <MdOutlineKeyboardArrowRight
@@ -218,10 +220,10 @@ function DetailCard({
         ))}
       </div>
 
-      <div className="flex flex-col gap-y-4 px-6 pb-6 py-10">
-        <h4 className="text-xl font-semibold">{title}</h4>
+      <div className="flex flex-col gap-y-4 px-4 xl:px-6 py-6">
+        <h4 className="text-base lg:text-xl font-semibold">{title}</h4>
 
-        <p>
+        <p className="text-sm lg:text-base text-gray-600">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas
           cumque iste porro ex accusantium ipsam molestias obcaecati, provident
           numquam natus excepturi doloribus nostrum saepe, beatae repellendus
@@ -237,8 +239,8 @@ function DetailCard({
       </ul> */}
 
         {companies.length > 0 && (
-          <div className="flex gap-2">
-            {companies.map((item) => (
+          <div className="flex gap-2 flex-wrap items-center">
+            {companies.slice(0, 2).map((item) => (
               <div
                 className="relative flex h-12 w-28 items-center justify-center bg-transparent"
                 key={item}
@@ -252,6 +254,7 @@ function DetailCard({
                 />
               </div>
             ))}
+            <span className="text-gray-600 text-sm">+10 More</span>
           </div>
         )}
       </div>

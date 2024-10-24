@@ -1,6 +1,6 @@
 function HorizonCard({ title, description, Icon, badge }) {
   return (
-    <div className="rounded-xl px-4 md:px-6 p-6 grid grid-cols-12 items-center bg-white border border-[#E5E7EB] w-full md:w-2/5">
+    <div className="rounded-xl px-4 md:px-6 p-6 grid grid-cols-12 items-center bg-white border border-[#E5E7EB] w-full lg:w-3/5  xl:w-2/5">
       <div className="hidden md:block col-span-2">
         <Icon size={56} className="text-quaternary" />
       </div>

@@ -30,6 +30,10 @@ export const eligiblityData = [
 export const weeksCurriculumData = [
   {
     track: "Core Business Communication and Client Management",
+    lectures: 24,
+    assignments: 30,
+    description:
+      "Learn expert communication, client management, negotiation, and conflict resolution skills to thrive professionally.",
     duration: {
       from: 1,
       to: 4,
@@ -96,6 +100,10 @@ export const weeksCurriculumData = [
   },
   {
     track: "Leadership, Adaptability, and Portfolio Development",
+    lectures: 36,
+    assignments: 42,
+    description:
+      "Master leadership, adaptability, teamwork, and personal branding with ATS Complaint portfolio and LinkedIn optimization skills.",
     duration: {
       from: 5,
       to: 8,
@@ -162,6 +170,10 @@ export const weeksCurriculumData = [
   },
   {
     track: "Career Readiness and Interview Mastery",
+    lectures: 34,
+    assignments: 42,
+    description:
+      "Master resume defence, business aptitude, and interview strategies with hands-on mock sessions and AI-driven solutions for career success.",
     duration: {
       from: 9,
       to: 12,

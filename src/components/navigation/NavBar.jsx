@@ -23,7 +23,7 @@ function NavBar() {
   return (
     <nav
       className={cn(
-        "flex items-center gap-x-8 justify-between md:justify-evenly py-4 px-4 relative bg-primary-dark"
+        "flex items-center gap-x-8 justify-between lg:justify-evenly py-4 px-4 relative bg-primary-dark"
       )}
     >
       <section className="text-white">
@@ -37,7 +37,7 @@ function NavBar() {
         />
       </section>
 
-      <div className="md:hidden">
+      <div className="lg:hidden">
         <button className="outline-none z-1" onClick={toggleMenu}>
           {isOpen ? (
             <FiX className="h-8 w-8 text-white" />
@@ -49,7 +49,7 @@ function NavBar() {
 
       {isOpen && <MobileNavBar />}
 
-      <section className="hidden md:block">
+      <section className="hidden lg:block">
         <ul className="flex items-center gap-x-6 text-white">
           <li className="text-lg font-medium">Overview</li>
 
@@ -61,7 +61,7 @@ function NavBar() {
         </ul>
       </section>
 
-      <section className="hidden md:flex items-center gap-x-5">
+      <section className="hidden lg:flex items-center gap-x-5">
         <SecondaryButton size="large">Start Free Trail</SecondaryButton>
 
         <PrimaryButton size="large">Book a Demo</PrimaryButton>

@@ -35,7 +35,7 @@ function Statistics() {
 
   return (
     <section className="w-full pt-28 md:pt-24 pb-8 md:pb-10 px-4">
-      <div className="md:max-w-[1360px] mx-auto flex flex-col">
+      <div className="xl:max-w-[1360px] mx-auto flex flex-col">
         <ChipsLayout
           chipsData={chipsData}
           customStyle="pb-[16px]"
