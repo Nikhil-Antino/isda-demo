@@ -85,6 +85,21 @@ body {
   background: linear-gradient(#f9fafb, #f9fafb) padding-box,
     linear-gradient(-135deg, #ffffffb3, #b3b3b3) border-box;
   border: 1px solid transparent;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.gradient-border-clickable {
+  background: linear-gradient(#ffffff, #ffffff) padding-box,
+    linear-gradient(-135deg, #ffffffb3, #b3b3b3) border-box;
+  border: 1px solid transparent;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.gradient-border-clickable:hover {
+  transform: scale(1.02);
+  /* box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15); */
+  background: linear-gradient(#ffffff, #ffffff) padding-box,
+    linear-gradient(-135deg, #ffffffb3, #a1a1a1) border-box; /* Slightly stronger gradient */
 }
 
 /* .gradient-border-gray-145 {
@@ -159,4 +174,25 @@ details[open] summary::after {
     #c5135d 65.1%,
     #6a11b0
   );
+}
+
+.educators-gradient {
+  /* background: linear-gradient(145deg, #e6e6e6, #f5f5f5); */
+
+  /* original */
+  /* background: linear-gradient(
+    135deg,
+    rgba(20, 99, 255, 0.2),
+    rgba(255, 249, 240, 0.7)
+  ); */
+
+  /* test-1 good, change direction little bit */
+  background: linear-gradient(
+    155deg,
+    rgba(20, 99, 255, 0.1),
+    rgba(255, 249, 240, 0.8)
+  );
+
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.05),
+    -1px -1px 3px rgba(255, 255, 255, 0.6);
 }

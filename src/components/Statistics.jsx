@@ -19,8 +19,8 @@ const chipsData = [
     Icon: PiClockCountdownFill,
   },
   {
-    point: "Job guarantee upon completion",
-    subject: "100% Guarantee",
+    point: "Job guarantee",
+    subject: "100%",
     Icon: IoShieldCheckmarkSharp,
   },
   {
@@ -34,7 +34,7 @@ function Statistics() {
   const isMobile = useMediaQuery("(max-width: 767.98px)");
 
   return (
-    <section className="w-full pt-28 md:pt-24 pb-8 md:pb-10 px-4">
+    <section className="w-full pt-28 md:pt-24 px-4">
       <div className="xl:max-w-[1360px] mx-auto flex flex-col">
         <ChipsLayout
           chipsData={chipsData}

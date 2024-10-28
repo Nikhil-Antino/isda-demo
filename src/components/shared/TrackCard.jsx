@@ -16,22 +16,27 @@ function TrackCard({
     <>
       <div
         className={cn(
-          "group flex cursor-pointer items-center justify-between gap-x-[8px] px-[24px] py-[16px] w-full",
+          "group flex cursor-pointer items-center justify-between gap-x-[8px] px-4 md:px-6 py-4 w-full rounded-lg",
           {
-            "gradient-border-light rounded-lg": selected,
+            "gradient-border-light": selected,
+            "gradient-border-clickable": !selected,
           }
         )}
         onClick={onClick}
       >
-        <div className="flex items-center gap-x-6">
-          <span className={cn("font-satoshi-medium text-xl text-quaternary")}>
+        <div className="flex items-center gap-x-3 lg:gap-x-6">
+          <span
+            className={cn(
+              "font-satoshi-medium text-base md:text-xl text-quaternary"
+            )}
+          >
             {iteration}
           </span>
 
           <div className="flex flex-col gap-y-1">
             <h4
               className={cn(
-                "font-semibold text-lg text-gray-500 group-hover:text-quaternary",
+                "font-semibold text-sm md:text-lg text-gray-500 group-hover:text-quaternary",
                 { "!text-quaternary": selected }
               )}
             >
@@ -40,7 +45,7 @@ function TrackCard({
 
             {lectures && assessments && (
               <div
-                className={cn("flex items-center gap-x-3", {
+                className={cn("flex items-center gap-x-2 sm:gap-x-3", {
                   "text-gray-600": !selected,
                   "text-quaternary": selected,
                 })}

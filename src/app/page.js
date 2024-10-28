@@ -19,8 +19,8 @@ export default function Home() {
       <JobSection />
       <SuccessStories />
       <HowItWorks />
-      <WhySection />
       <Educators />
+      <WhySection />
       <TuitionFee />
       {/* <About /> */}
       <FAQ />

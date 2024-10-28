@@ -16,14 +16,16 @@ function JobSection() {
 
   return (
     // bg-[url('/images/background/1.png')] bg-contain bg-center
-    <section className="w-full py-16 md:pt-24 md:pb-40 px-4 bg-[#FCFCFD]">
+    <section className="w-full pt-4 pb-16 md:pt-24 md:pb-40 px-4 bg-[#FCFCFD]">
       <div className="xl:max-w-[1360px] xl:mx-auto flex flex-col items-center gap-y-16">
         <div className="flex flex-col gap-y-2 items-center overflow-hidden">
-          <Badge customStyle={"flex items-center gap-x-1 mb-4"}>Overview</Badge>
+          <Badge customStyle={"flex items-center gap-x-1 mb-4"}>
+            Career Path
+          </Badge>
 
           <h2 className="text-xl md:text-3xl font-semibold text-center">
             Explore Your Future{" "}
-            <span className="text-primary bg-[url('/images/underline.svg')] bg-contain bg-center">
+            <span className="text-quaternary bg-[url('/images/underline-red.png')] bg-contain bg-center">
               Job Roles
             </span>
           </h2>
@@ -33,8 +35,8 @@ function JobSection() {
           </p>
         </div>
 
-        <div className="grid xl:grid-cols-5 gap-x-4 items-start w-full">
-          <div className="flex flex-col items-start gap-y-2 xl:col-span-2 w-full">
+        <div className="grid xl:grid-cols-5 xl:gap-x-8 items-start w-full">
+          <div className="flex flex-col items-start gap-y-4 xl:col-span-2 w-full">
             {jobCurriculumData.map((track, index) => (
               <TrackCard
                 key={index}
@@ -59,6 +61,7 @@ function JobSection() {
                       stats={data.stats}
                       companies={data.companies}
                       thumbnail={data.thumbnail}
+                      description={data.description}
                     />
                   ))}
                 </div>
@@ -75,6 +78,7 @@ function JobSection() {
                 stats={data.stats}
                 companies={data.companies}
                 thumbnail={data.thumbnail}
+                description={data.description}
               />
             ))}
           </div>
@@ -92,7 +96,6 @@ function TrackCard({
   setCurrentIndex,
   index,
   children,
-  logoPath,
   Icon,
 }) {
   const isMobile = useMediaQuery("(max-width: 1279.98px)");
@@ -107,13 +110,13 @@ function TrackCard({
   const selected = currentIndex === index;
 
   return (
-    <div className="flex flex-col gap-y-4 items-start w-full">
+    <section className="flex flex-col gap-y-4 items-start w-full">
       <button
         className={cn(
-          "py-4 px-4 ring-0 w-full text-start flex items-center justify-between group hover:rounded-lg hover:text-primary",
+          "py-4 px-4 ring-0 w-full text-start flex items-center justify-between group rounded-lg hover:text-quaternary",
           {
-            "gradient-border-light rounded-lg text-primary": selected,
-            "text-[#76767A]": !selected,
+            "gradient-border-light text-quaternary": selected,
+            "text-[#76767A] gradient-border-clickable": !selected,
           }
         )}
         onClick={() => selectTrackHandler(index)}
@@ -121,8 +124,8 @@ function TrackCard({
         <div className="grid grid-cols-8 items-center w-full">
           <Icon
             size={32}
-            className={cn("group-hover:text-primary", {
-              "text-primary": selected,
+            className={cn("group-hover:text-quaternary", {
+              "text-quaternary": selected,
               "text-[#76767A]": !selected,
             })}
           />
@@ -134,8 +137,8 @@ function TrackCard({
 
         <MdOutlineKeyboardArrowRight
           size={32}
-          className={cn("text-gray-500 group-hover:text-primary", {
-            "hidden xl:block xl:!text-primary": selected,
+          className={cn("text-[#76767A] group-hover:text-quaternary", {
+            "hidden xl:block xl:!text-quaternary": selected,
             block: !selected,
           })}
         />
@@ -143,14 +146,14 @@ function TrackCard({
         <FiMinus
           size={32}
           className={cn({
-            "text-gray-500 xl:hidden": selected,
+            "text-[#76767A] xl:hidden": selected,
             hidden: !selected,
           })}
         />
       </button>
 
       {children}
-    </div>
+    </section>
   );
 }
 
@@ -160,6 +163,7 @@ function DetailCard({
   stats,
   companies = [],
   thumbnail,
+  description,
 }) {
   const dataLength = stats.length - 1;
 
@@ -188,7 +192,7 @@ function DetailCard({
 
       <div
         className={
-          "z-1 absolute grid grid-cols-5 items-start justify-items-center gap-y-6 gap-x-1 px-4 py-2 bg-white rounded-xl top-36 border border-[#E5E7EB]"
+          "z-1 absolute grid grid-cols-5 items-center justify-items-center gap-y-6 gap-x-1 px-4 pt-1 pb-2 bg-white rounded-xl top-36 border border-[#E5E7EB]"
         }
         style={{
           boxShadow:
@@ -209,7 +213,7 @@ function DetailCard({
             </div>
 
             {(index == 0 || (index % 2 == 0 && index !== dataLength)) && (
-              <span
+              <div
                 className={cn({
                   "separator-dark": darkMode,
                   separator: !darkMode,
@@ -220,15 +224,10 @@ function DetailCard({
         ))}
       </div>
 
-      <div className="flex flex-col gap-y-4 px-4 xl:px-6 py-6">
+      <div className="flex flex-col gap-y-4 px-4 xl:px-6 pt-4 pb-6 justify-between h-full">
         <h4 className="text-base lg:text-xl font-semibold">{title}</h4>
 
-        <p className="text-sm lg:text-base text-gray-600">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas
-          cumque iste porro ex accusantium ipsam molestias obcaecati, provident
-          numquam natus excepturi doloribus nostrum saepe, beatae repellendus
-          eaque enim. Placeat, voluptas.
-        </p>
+        <p className="text-sm lg:text-base text-gray-700">{description}</p>
 
         {/* <ul className="list-disc pl-4">
         {stats.map((stat, index) => (
@@ -254,7 +253,9 @@ function DetailCard({
                 />
               </div>
             ))}
-            <span className="text-gray-600 text-sm">+10 More</span>
+            <span className="text-gray-600 text-sm font-semibold">
+              +10 More
+            </span>
           </div>
         )}
       </div>

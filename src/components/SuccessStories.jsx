@@ -69,7 +69,7 @@ function SuccessStories() {
           </Badge>
           <h2 className="text-xl md:text-3xl font-semibold text-center">
             Success Speaks for{" "}
-            <span className="text-primary bg-[url('/images/underline.svg')] bg-contain bg-center">
+            <span className="text-quaternary bg-[url('/images/underline-red.png')] bg-contain bg-center">
               Itself
             </span>
           </h2>

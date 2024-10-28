@@ -34,19 +34,20 @@ const courseData = [
     model: "Risk-Free Payment Model",
     stats: [
       "Pay after you earn",
+      "Pay in easy EMIs",
       "Student-Friendly Model",
-      "Pay in easy EMIs Success-tied-Investment",
+      "Success-tied-Investment",
     ],
   },
 ];
 
 function TuitionFee() {
   return (
-    <section className="w-full py-16 md:py-36 px-4 bg-[#f9fafb]">
+    <section className="w-full py-16 md:py-24 px-4 bg-[#f9fafb] border-y border-[#E5E7EB]">
       <div className="xl:max-w-[1360px] xl:mx-auto flex flex-col items-center gap-y-10 md:gap-y-16">
         <h2 className="text-xl md:text-3xl font-semibold text-center">
           Course{" "}
-          <span className="text-primary bg-[url('/images/underline.svg')] bg-contain bg-center">
+          <span className="text-quaternary bg-[url('/images/underline-red.png')] bg-contain bg-center">
             Tuition Fee
           </span>
         </h2>

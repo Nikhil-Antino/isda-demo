@@ -11,7 +11,7 @@ const SIZE_CONST = {
 };
 
 const VARIANTS = {
-  primary: "bg-primary text-white hover:bg-blue-700 border-primary border",
+  primary: "bg-quaternary text-white hover:bg-red-500 border-quaternary border",
   secondary:
     "bg-transparent border-gray-200 border text-gray-200 hover:border-white hover:text-white",
   secondaryClr:

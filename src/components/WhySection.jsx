@@ -1,11 +1,8 @@
 import React from "react";
 
-import { MdWork } from "react-icons/md";
-import { AiOutlineLaptop } from "react-icons/ai";
-import { GiBookshelf } from "react-icons/gi";
-import { AiOutlineGlobal } from "react-icons/ai";
-import { FaRocket } from "react-icons/fa";
 import Image from "next/image";
+
+import { FaHeart } from "react-icons/fa";
 
 const whyData = [
   {
@@ -48,12 +45,12 @@ const whyData = [
 
 function WhySection() {
   return (
-    <section className="w-full py-16 md:pt-24 md:pb-40 px-4 bg-[#F9FAFB]">
+    <section className="w-full py-16 md:py-24 px-4">
       <div className="xl:max-w-[1360px] xl:mx-auto flex flex-col items-center gap-y-16">
         <div className="flex flex-col items-center gap-y-2">
           <h2 className="text-xl md:text-3xl font-semibold text-center">
             Why Choose{" "}
-            <span className="text-primary bg-[url('/images/underline.svg')] bg-contain bg-center">
+            <span className="text-quaternary bg-[url('/images/underline-red.png')] bg-contain bg-center">
               ISDA?
             </span>
           </h2>
@@ -65,7 +62,7 @@ function WhySection() {
 
         <div className="grid grid-cols-2 lg:grid-cols-3 gap-8 justify-center w-full">
           {whyData.map((data, index) => (
-            <FeatureCard key={index} {...data} />
+            <FeatureCard key={index} {...data} index={index} />
           ))}
         </div>
       </div>
@@ -75,11 +72,11 @@ function WhySection() {
 
 export default WhySection;
 
-function FeatureCard({ title, description, logoPath }) {
+function FeatureCard({ title, description, logoPath, index }) {
   return (
-    <div className="flex flex-col items-center gap-y-[20px]">
+    <div className="flex flex-col items-center gap-y-3 md:gap-y-5">
       <span
-        className="flex items-center justify-center rounded-[10px] border border-gray-2 bg-white p-[20px]"
+        className="flex items-center justify-center rounded-[10px] border border-gray-2 p-[20px] relative"
         style={{ boxShadow: "0px 1px 2px 0px rgba(16, 24, 40, 0.05)" }}
       >
         <Image
@@ -90,8 +87,14 @@ function FeatureCard({ title, description, logoPath }) {
           alt={title}
         />
         {/* <Icon size={48} className="text-quaternary" /> */}
+        {index === 3 && (
+          <FaHeart
+            size={36}
+            className="text-red-500 absolute -left-10 bottom-0 -rotate-45"
+          />
+        )}
       </span>
-      <div className="flex flex-col items-center gap-y-[8px]">
+      <div className="flex flex-col items-center md:gap-y-2">
         <h3 className="text-center font-semibold text-lg">{title}</h3>
         <p className="text-center font-regular text-sm text-gray-600">
           {description}

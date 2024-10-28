@@ -23,7 +23,7 @@ function NavBar() {
   return (
     <nav
       className={cn(
-        "flex items-center gap-x-8 justify-between lg:justify-evenly py-4 px-4 relative bg-primary-dark"
+        "flex items-center gap-x-8 justify-between lg:justify-evenly py-4 px-4 relative bg-primary-dark sticky top-0 z-40"
       )}
     >
       <section className="text-white">
@@ -51,7 +51,7 @@ function NavBar() {
 
       <section className="hidden lg:block">
         <ul className="flex items-center gap-x-6 text-white">
-          <li className="text-lg font-medium">Overview</li>
+          <li className="text-lg font-medium">Career Path</li>
 
           <li className="text-lg font-medium">Success Stories</li>
 
@@ -62,8 +62,6 @@ function NavBar() {
       </section>
 
       <section className="hidden lg:flex items-center gap-x-5">
-        <SecondaryButton size="large">Start Free Trail</SecondaryButton>
-
         <PrimaryButton size="large">Book a Demo</PrimaryButton>
       </section>
     </nav>

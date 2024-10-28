@@ -14,14 +14,14 @@ const FAQ = () => {
 
   return (
     <section
-      className="module bg-[#FCFCFD] py-[64px] px-[16px] md:py-[96px] md:px-[124px]"
+      className="module bg-[#FCFCFD] py-[64px] px-[16px] md:py-20 md:px-[124px]"
       id="FAQs"
     >
       <div className="flex flex-col items-center gap-y-10 xl:max-w-[1360px] xl:mx-auto">
         <div className="flex flex-col items-center gap-y-[16px] pb-[8px]">
           <h2 className="text-xl md:text-3xl font-semibold text-center">
             Frequently asked{" "}
-            <span className="text-primary bg-[url('/images/underline.svg')] bg-contain bg-center">
+            <span className="text-quaternary bg-[url('/images/underline-red.png')] bg-contain bg-center">
               questions
             </span>
           </h2>
@@ -42,6 +42,7 @@ const FAQ = () => {
                   className={cn({
                     "!bg-blue-600 text-white":
                       active.category === item.category,
+                    "hover:!text-white": active.category === item.category,
                   })}
                 >
                   {item.category}

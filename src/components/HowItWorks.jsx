@@ -15,6 +15,7 @@ import {
 } from "@/utils/constant";
 import useMediaQuery from "@/utils/hooks/useMediaQuery";
 import Image from "next/image";
+import Badge from "./shared/Badge";
 
 function HowItWorks() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -34,21 +35,21 @@ function HowItWorks() {
   const numbArray = Array.from({ length: 6 }, (_, index) => index + 1);
 
   return (
-    <section className="w-full py-16 md:py-36 px-4">
+    <section className="w-full py-16 md:py-24 px-4">
       <div className="xl:max-w-[1360px] xl:mx-auto flex flex-col items-center gap-y-10 md:gap-y-16">
         <div className="flex flex-col gap-y-2 items-center overflow-hidden">
-          {/* <Badge customStyle={"flex items-center gap-x-1 mb-4"}>Overview</Badge> */}
+          <Badge customStyle={"flex items-center gap-x-1 mb-4"}>Program</Badge>
 
           <h2 className="text-xl md:text-3xl font-semibold text-center">
             How It Works: Your Journey at{" "}
-            <span className="text-primary bg-[url('/images/underline.svg')] bg-contain bg-center">
+            <span className="text-quaternary bg-[url('/images/underline-red.png')] bg-contain bg-center">
               ISDA
             </span>
           </h2>
-          {/* <p className="text-sm md:text-lg text-gray-600 text-center">
-            Find the right career path for you by exploring various roles
-            offered by Global companies.
-          </p> */}
+          <p className="text-sm md:text-lg text-gray-600 text-center">
+            Your Path to Success at ISDA: Step-by-Step Guide to make sure you
+            land your dream job!
+          </p>
         </div>
 
         <div className="grid w-full">
@@ -56,7 +57,7 @@ function HowItWorks() {
             step={1}
             title={"Enroll in ISDA’s 12-Week Program"}
             description={
-              "Your Path to Success at ISDA: Step-by-Step Guide to make sure you land your dream job!"
+              "Take the first step towards success by enrolling with us today!"
             }
           >
             <div className="flex flex-wrap gap-6 justify-center pb-12">
@@ -70,7 +71,7 @@ function HowItWorks() {
             step={2}
             title={"Upskill to be ready for Global Companies"}
             description={
-              "12 Weeks Accelerated Business Executive Program Curated by Top Professionals"
+              "12-Weeks Accelerated Business Executive Program Curated by Top Professionals"
             }
           >
             <div className="grid xl:grid-cols-2 gap-x-6 items-start pb-12">
@@ -134,6 +135,9 @@ function HowItWorks() {
           <PointerContainer
             step={4}
             title={"Job at Global Companies"}
+            description={
+              "A brief overview of the placement support provided to our alumni"
+            }
             end={true}
           >
             <div className="grid lg:grid-cols-2 gap-y-6 gap-x-10 py-2 items-center pb-12 relative">
@@ -149,21 +153,25 @@ function HowItWorks() {
               </div>
 
               <div className="flex flex-col gap-y-6">
-                <h4 className="text-lg md:text-xl font-semibold text-center">
+                <h4 className="text-lg md:text-xl font-semibold text-start">
                   Top Recruiters
                 </h4>
 
-                <div className="grid grid-cols-3 gap-4">
-                  {numbArray.map((item) => (
-                    <Image
-                      key={item}
-                      src={`/images/hiring-partners-logo/${item}.png`}
-                      width={100}
-                      height={40}
-                      objectFit="contain"
-                      alt="Hiring Partners"
-                    />
-                  ))}
+                <div className="relative">
+                  <div className="grid grid-cols-3 gap-4">
+                    {numbArray.map((item) => (
+                      <Image
+                        key={item}
+                        src={`/images/hiring-partners-logo/${item}.png`}
+                        width={140}
+                        height={60}
+                        objectFit="contain"
+                        alt="Hiring Partners"
+                      />
+                    ))}
+                  </div>
+
+                  <div className="absolute right-0 top-0 h-full w-4/6 bg-gradient-to-l from-white via-white/60 to-transparent pointer-events-none"></div>
                 </div>
               </div>
               <div className=" absolute top-40 right-0 h-[230px] left-1/3 w-20 rounded-full background-gradient blur-[200px] md:h-20 md:w-56"></div>
@@ -179,7 +187,7 @@ export default HowItWorks;
 
 function JobStats({ subject, point, logoPath, Icon }) {
   return (
-    <div className="grid xl:grid-cols-12 gap-x-3 items-center">
+    <div className="grid xl:grid-cols-12 gap-x-3 items-center justify-items-center xl:justify-items-start">
       {logoPath ? (
         <div className="w-10 h-10 rounded-full text-quaternary relative flex items-center justify-center xl:col-span-2">
           <Image
@@ -194,9 +202,13 @@ function JobStats({ subject, point, logoPath, Icon }) {
         <Icon size={36} className="text-quaternary xl:col-span-2" />
       )}
 
-      <div className="flex flex-col gap-y-1 xl:col-span-10">
-        <h5 className="font-semibold text-lg">{point}</h5>
-        <h4 className="text-sm font-medium text-gray-600">{subject}</h4>
+      <div className="flex flex-col-reverse gap-y-1 xl:col-span-10">
+        <h4 className="text-sm font-medium text-gray-600 text-center xl:text-start">
+          {subject}
+        </h4>
+        <h5 className="font-semibold text-lg text-center xl:text-start">
+          {point}
+        </h5>
       </div>
     </div>
   );
@@ -268,12 +280,13 @@ function CertificateSection() {
         </li>
       </ul>
 
-      <div className="relative bg-[#F9FAFB] p-8 rounded-xl border border-[#E5E7EB] lg:col-start-7 lg:col-span-7 w-fit">
+      <div className="relative bg-[#F9FAFB] p-2 rounded-xl border border-[#E5E7EB] lg:col-start-7 lg:col-span-7 w-fit">
         <Image
           src={"/images/isda-certificate.png"}
           width={450}
-          height={280}
+          height={400}
           objectFit="contain"
+          layout="responsive"
           alt="certificate"
         />
       </div>

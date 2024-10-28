@@ -14,12 +14,12 @@ module.exports = {
         "primary-dark": "#030122",
         secondary: "#ffc933",
         tertiary: "#fff9f0ff",
-        quaternary: "#ff595eff",
+        quaternary: "#ff595eee",
         grayshade: "#F9FAFB",
       },
 
       animation: {
-        infiniteScroll: "xscroll 40s linear infinite backwards",
+        infiniteScroll: "xscroll 25s linear infinite backwards",
         infiniteScrollReverse: "xscroll 40s linear infinite reverse",
         infiniteScrollFast: "xscroll 25s linear infinite backwards",
         infiniteScrollReverseFast: "xscroll 25s linear infinite reverse",

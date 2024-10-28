@@ -21,7 +21,9 @@ function ProgramDetailCard({
       }}
     >
       <div className="flex flex-col gap-y-1">
-        <p className="text-lg font-semibold">What you’ll Learn? 📚</p>
+        <p className="text-base md:text-lg font-semibold">
+          What you’ll Learn? 📚
+        </p>
 
         <p className="text-gray-600 text-sm">{description}</p>
 
@@ -36,7 +38,7 @@ function ProgramDetailCard({
       <div className="custom-scroll overflow-y-scroll grid gap-y-4 max-h-[35vh] md:max-h-[22vh] lg:pr-4">
         {topics.map((stat, idx) => (
           <div className="flex flex-col gap-y-2" key={idx}>
-            <h5 className="text-gray-700">
+            <h5 className="text-sm md:text-base text-gray-700">
               <span className="text-black font-semibold">
                 Week {stat.week}:
               </span>{" "}
@@ -62,7 +64,25 @@ function ProgramDetailCard({
         ))}
       </div>
       <div className="sticky bottom-0 pt-2 bg-grayshade border-t-2 border-[#E5E7EB] flex items-center justify-center">
-        <p className="text-sm">{factors.join(" | ")}</p>
+        <div className="flex flex-col gap-y-1 items-start">
+          <p className="text-sm lg:text-base font-semibold text-gray-700">
+            Add-Ons
+          </p>
+          <div className="flex items-center gap-x-1 md:gap-x-2 flex-wrap">
+            {factors.map((factor, index) => {
+              return (
+                <React.Fragment key={index}>
+                  {index > 0 && index <= factors.length - 1 && (
+                    <span
+                      className={cn("h-1.5 w-1.5 rounded-full bg-gray-400")}
+                    />
+                  )}
+                  <span className="text-sm md:text-base">{factor}</span>
+                </React.Fragment>
+              );
+            })}
+          </div>
+        </div>
       </div>
     </div>
   );

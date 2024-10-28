@@ -20,7 +20,7 @@ function About() {
       <div className="xl:max-w-[1360px] xl:mx-auto flex flex-col items-center gap-y-10 md:gap-y-16">
         <h2 className="text-xl md:text-3xl font-semibold text-center">
           Vision &{" "}
-          <span className="text-primary bg-[url('/images/underline.svg')] bg-contain bg-center">
+          <span className="text-quaternary bg-[url('/images/underline-red.png')] bg-contain bg-center">
             Mission
           </span>
         </h2>

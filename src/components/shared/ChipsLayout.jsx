@@ -13,7 +13,7 @@ const ChipsLayout = ({
   const dataLength = chipsData.length - 1;
 
   const containerStyle =
-    "z-1 relative grid grid-cols-11 justify-items-center gap-y-6 items-start gap-x-1 md:gap-0 md:flex w-full md:items-center md:justify-between p-[24px] w-full";
+    "z-1 relative grid grid-cols-11 justify-items-center gap-y-6 items-start gap-x-1 md:gap-0 md:flex lg:w-4/5 md:items-center md:justify-between p-[24px] w-full lg:mx-auto";
 
   return (
     <div
@@ -43,7 +43,7 @@ const ChipsLayout = ({
             {isMobile ? (
               <>
                 {(index == 0 || (index % 2 == 0 && index !== dataLength)) && (
-                  <span
+                  <div
                     className={cn({
                       "separator-dark": darkMode,
                       separator: !darkMode,
@@ -54,7 +54,7 @@ const ChipsLayout = ({
             ) : (
               <>
                 {index < dataLength && (
-                  <span
+                  <div
                     className={cn({
                       "separator-dark": darkMode,
                       separator: !darkMode,

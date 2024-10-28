@@ -16,7 +16,7 @@ export const eligiblityData = [
     description:
       "Complete Application Form + Aptitude Test. Check if you are ready for Global Companies.",
     Icon: RiFileTextLine,
-    badge: "15 min test",
+    badge: "15 min test only",
   },
 
   {
@@ -248,7 +248,7 @@ export const jobStats = [
   },
 
   {
-    subject: "High Demand Business Roles across Global Companies",
+    subject: "Business Roles across Global Companies",
     point: "50+",
     logoPath: null,
     Icon: AiOutlineGlobal,
@@ -319,20 +319,22 @@ export const jobCurriculumData = [
     track: "Logistics & Operations Roles",
     trackData: [
       {
-        thumbnail: null,
+        thumbnail: "/images/job-roles/9.png",
         title: "Logistics Coordinator",
         industries: ["Manufacturing", "Retail", "Logistics"],
         stats: [
           {
             subject: "3000+",
-            point: "hired this year",
+            point: "Hiried this year",
           },
           {
             subject: "4.0 LPA",
-            point: "Average Salary",
+            point: "Avg Salary",
           },
         ],
         companies: ["1", "2", "7"],
+        description:
+          "Manages labor planning, resolves supply chain issues, and supports critical initiatives.",
       },
       {
         thumbnail: "/images/job-roles/1.png",
@@ -341,14 +343,16 @@ export const jobCurriculumData = [
         stats: [
           {
             subject: "1800+",
-            point: "hired this year",
+            point: "Hiried this year",
           },
           {
             subject: "3.8 LPA",
-            point: "Average Salary",
+            point: "Avg Salary",
           },
         ],
         companies: ["1", "2", "5"],
+        description:
+          "Oversees logistics operations, ensuring smooth operations, issue resolution, and tracking delivery performance.",
       },
     ],
   },
@@ -364,14 +368,16 @@ export const jobCurriculumData = [
         stats: [
           {
             subject: "2500+",
-            point: "hired this year",
+            point: "Hiried this year",
           },
           {
             subject: "4.5 LPA",
-            point: "Average Salary",
+            point: "Avg Salary",
           },
         ],
         companies: ["1", "2", "11"],
+        description:
+          "Optimises operational processes, ensuring efficiency, compliance, and seamless client service delivery",
       },
       {
         thumbnail: "/images/job-roles/4.png",
@@ -380,14 +386,16 @@ export const jobCurriculumData = [
         stats: [
           {
             subject: "1300+",
-            point: "hired this year",
+            point: "Hiried this year",
           },
           {
             subject: "4.0 LPA",
-            point: "Average Salary",
+            point: "Avg Salary",
           },
         ],
         companies: ["16", "13", "14"],
+        description:
+          "Handles banking transactions, ensuring accuracy, compliance, and customer satisfaction.",
       },
     ],
   },
@@ -403,14 +411,16 @@ export const jobCurriculumData = [
         stats: [
           {
             subject: "2000+",
-            point: "hired this year",
+            point: "Hiried this year",
           },
           {
             subject: "4.2 LPA",
-            point: "Average Salary",
+            point: "Avg Salary",
           },
         ],
         companies: ["1", "2", "4"],
+        description:
+          "Provides accurate data annotation to improve AI/ML models for search accuracy and performance, ensuring high-quality customer experiences.",
       },
       {
         thumbnail: "/images/job-roles/5.png",
@@ -419,14 +429,16 @@ export const jobCurriculumData = [
         stats: [
           {
             subject: "1500+",
-            point: "hired this year",
+            point: "Hiried this year",
           },
           {
             subject: "4.6 LPA",
-            point: "Average Salary",
+            point: "Avg Salary",
           },
         ],
         companies: ["1", "20", "11"],
+        description:
+          "Investigates and eliminates e-commerce risks, ensuring safe, secure transactions by analysing data and communicating with customers and internal teams.",
       },
     ],
   },
@@ -442,14 +454,34 @@ export const jobCurriculumData = [
         stats: [
           {
             subject: "2000+",
-            point: "hired this year",
+            point: "Hiried this year",
           },
           {
             subject: "3.5 LPA",
-            point: "Average Salary",
+            point: "Avg Salary",
           },
         ],
         companies: ["1", "2", "12"],
+        description:
+          "Evaluates reimbursement requests, resolves inventory issues, and ensures consistent support in a fast-paced environment.",
+      },
+      {
+        thumbnail: "/images/job-roles/3.png",
+        title: "Client Relationship Associate",
+        industries: ["E-commerce", "Tech Support", "Telecom"],
+        stats: [
+          {
+            subject: "2500+",
+            point: "Hiried this year",
+          },
+          {
+            subject: "3.8 LPA",
+            point: "Avg Salary",
+          },
+        ],
+        companies: ["16", "13"],
+        description:
+          "Assists customers with banking services, inquiries redressal, and ensures excellent client satisfaction while maintaining service quality standards",
       },
     ],
   },
@@ -465,14 +497,16 @@ export const jobCurriculumData = [
         stats: [
           {
             subject: "1200+",
-            point: "hired this year",
+            point: "Hiried this year",
           },
           {
             subject: "4.8 LPA",
-            point: "Average Salary",
+            point: "Avg Salary",
           },
         ],
         companies: ["1", "2", "17"],
+        description:
+          "Ensures products meet regulatory standards, addresses compliance risks, and supports audits",
       },
 
       {
@@ -482,14 +516,16 @@ export const jobCurriculumData = [
         stats: [
           {
             subject: "1500+",
-            point: "hired this year",
+            point: "Hiried this year",
           },
           {
             subject: "5.0 LPA",
-            point: "Average Salary",
+            point: "Avg Salary",
           },
         ],
         companies: ["1", "2", "11"],
+        description:
+          "Focus on regulatory compliance, risk management, and policy adherence across various industries.",
       },
     ],
   },
