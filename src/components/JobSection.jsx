@@ -8,6 +8,7 @@ import { jobCurriculumData } from "@/utils/constant";
 import useMediaQuery from "@/utils/hooks/useMediaQuery";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import { FiMinus } from "react-icons/fi";
+import { PrimaryButton } from "./shared/Button";
 
 function JobSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -16,7 +17,10 @@ function JobSection() {
 
   return (
     // bg-[url('/images/background/1.png')] bg-contain bg-center
-    <section className="w-full pt-4 pb-16 md:pt-24 md:pb-40 px-4 bg-[#FCFCFD]">
+    <section
+      id="career-path"
+      className="w-full pt-8 pb-16 md:pt-24 md:pb-40 px-4 bg-[#FCFCFD]"
+    >
       <div className="xl:max-w-[1360px] xl:mx-auto flex flex-col items-center gap-y-16">
         <div className="flex flex-col gap-y-2 items-center overflow-hidden">
           <Badge customStyle={"flex items-center gap-x-1 mb-4"}>
@@ -48,10 +52,13 @@ function JobSection() {
                 Icon={track.Icon}
               >
                 <div
-                  className={cn("grid gap-y-6 xl:hidden", {
-                    hidden: currentIndex !== index,
-                    block: currentIndex === index,
-                  })}
+                  className={cn(
+                    "grid gap-y-6 xl:hidden self-center xl:self-start",
+                    {
+                      hidden: currentIndex !== index,
+                      block: currentIndex === index,
+                    }
+                  )}
                 >
                   {track.trackData.map((data, index) => (
                     <DetailCard
@@ -83,6 +90,8 @@ function JobSection() {
             ))}
           </div>
         </div>
+
+        <PrimaryButton size={"large"}>Secure Your Spot</PrimaryButton>
       </div>
     </section>
   );

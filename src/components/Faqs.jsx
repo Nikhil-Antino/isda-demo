@@ -2,8 +2,9 @@
 
 import { faqsData } from "@/utils/constant";
 import React, { useState } from "react";
-import { SecondaryButton, SecondaryButtonColour } from "./shared/Button";
+import { PrimaryButton, SecondaryButtonColour } from "./shared/Button";
 import cn from "classnames";
+import Badge from "./shared/Badge";
 
 const FAQ = () => {
   const [active, setActive] = useState(faqsData[0]);
@@ -19,6 +20,10 @@ const FAQ = () => {
     >
       <div className="flex flex-col items-center gap-y-10 xl:max-w-[1360px] xl:mx-auto">
         <div className="flex flex-col items-center gap-y-[16px] pb-[8px]">
+          <Badge customStyle={"flex items-center gap-x-1 mb-4"}>
+            Have a doubt?
+          </Badge>
+
           <h2 className="text-xl md:text-3xl font-semibold text-center">
             Frequently asked{" "}
             <span className="text-quaternary bg-[url('/images/underline-red.png')] bg-contain bg-center">
@@ -32,21 +37,21 @@ const FAQ = () => {
         </div>
 
         <div className="flex w-full flex-col items-center gap-y-[40px]">
-          <div className="flex flex-wrap items-center justify-center gap-[16px]">
+          <div className="flex flex-col md:flex-row md:flex-wrap items-center md:justify-center gap-[16px]">
             {faqsData.map((item, index) => {
               return (
-                <SecondaryButtonColour
+                <PrimaryButton
                   key={index}
                   onClick={() => handleItemClick(item)}
                   size={"small"}
                   className={cn({
-                    "!bg-blue-600 text-white":
-                      active.category === item.category,
-                    "hover:!text-white": active.category === item.category,
+                    "!bg-red-500": active.category === item.category,
+                    "!bg-transparent !text-quaternary !border-quaternary hover:!bg-quaternary hover:!text-white":
+                      active.category !== item.category,
                   })}
                 >
                   {item.category}
-                </SecondaryButtonColour>
+                </PrimaryButton>
               );
             })}
           </div>

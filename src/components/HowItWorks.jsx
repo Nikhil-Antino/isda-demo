@@ -16,6 +16,7 @@ import {
 import useMediaQuery from "@/utils/hooks/useMediaQuery";
 import Image from "next/image";
 import Badge from "./shared/Badge";
+import { PrimaryButton } from "./shared/Button";
 
 function HowItWorks() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -35,7 +36,7 @@ function HowItWorks() {
   const numbArray = Array.from({ length: 6 }, (_, index) => index + 1);
 
   return (
-    <section className="w-full py-16 md:py-24 px-4">
+    <section id="program" className="w-full py-16 md:py-24 px-4">
       <div className="xl:max-w-[1360px] xl:mx-auto flex flex-col items-center gap-y-10 md:gap-y-16">
         <div className="flex flex-col gap-y-2 items-center overflow-hidden">
           <Badge customStyle={"flex items-center gap-x-1 mb-4"}>Program</Badge>
@@ -60,21 +61,25 @@ function HowItWorks() {
               "Take the first step towards success by enrolling with us today!"
             }
           >
-            <div className="flex flex-wrap gap-6 justify-center pb-12">
+            <div className="flex flex-wrap gap-6 justify-center pb-8">
               {eligiblityData.map((data, index) => (
                 <HorizonCard key={index} {...data} />
               ))}
             </div>
+
+            <PrimaryButton className={"mx-auto mb-12"} size={"large"}>
+              Enroll Now
+            </PrimaryButton>
           </PointerContainer>
 
           <PointerContainer
             step={2}
             title={"Upskill to be ready for Global Companies"}
             description={
-              "12-Weeks Accelerated Business Executive Program Curated by Top Professionals"
+              "Master must have skills for today’s world in 12-Weeks Accelerated Business Executive Program Curated by Top Professionals."
             }
           >
-            <div className="grid xl:grid-cols-2 gap-x-6 items-start pb-12">
+            <div className="grid xl:grid-cols-2 gap-x-6 gap-y-8 items-start pb-12 pt-2">
               <div className="flex flex-col items-start gap-y-4">
                 {weeksCurriculumData.map((track, index) => (
                   <TrackCard
@@ -119,6 +124,20 @@ function HowItWorks() {
                   />
                 )}
               </div>
+
+              <div className="place-self-center xl:col-span-2 flex flex-col items-center gap-y-6">
+                <p className="text-gray-600 text-sm text-center">
+                  <span className="font-semibold text-black">
+                    Fast-Track to Job Interviews:{" "}
+                  </span>
+                  <span>
+                    By Week 12, you’ll be ready to start your interviews with
+                    top companies like Amazon, Flipkart, Wipro, and more.
+                  </span>
+                </p>
+
+                <PrimaryButton>Explore Curriculum</PrimaryButton>
+              </div>
             </div>
           </PointerContainer>
 
@@ -140,7 +159,7 @@ function HowItWorks() {
             }
             end={true}
           >
-            <div className="grid lg:grid-cols-2 gap-y-6 gap-x-10 py-2 items-center pb-12 relative">
+            <div className="grid lg:grid-cols-2 gap-y-6 gap-x-10 py-2 items-center relative">
               <div
                 className="rounded-2xl p-4 xl:p-8 grid grid-cols-2 grid-rows-2 gap-4 xl:gap-6 rounded-xl relative z-10 bg-white"
                 style={{
@@ -175,6 +194,12 @@ function HowItWorks() {
                 </div>
               </div>
               <div className=" absolute top-40 right-0 h-[230px] left-1/3 w-20 rounded-full background-gradient blur-[200px] md:h-20 md:w-56"></div>
+
+              <PrimaryButton
+                className={"place-self-center lg:col-span-2 mb-8 mt-10"}
+              >
+                Start Your Journey
+              </PrimaryButton>
             </div>
           </PointerContainer>
         </div>
@@ -290,6 +315,13 @@ function CertificateSection() {
           alt="certificate"
         />
       </div>
+
+      <PrimaryButton
+        className={"place-self-center lg:col-span-12"}
+        size={"large"}
+      >
+        Get Certified
+      </PrimaryButton>
     </div>
   );
 }

@@ -40,7 +40,7 @@ function ProgramDetailCard({
           <div className="flex flex-col gap-y-2" key={idx}>
             <h5 className="text-sm md:text-base text-gray-700">
               <span className="text-black font-semibold">
-                Week {stat.week}:
+                Week {stat.week === 11 ? `${stat.week} - ${12}` : stat.week}:
               </span>{" "}
               {stat.title}
             </h5>

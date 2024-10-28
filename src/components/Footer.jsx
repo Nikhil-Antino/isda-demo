@@ -24,23 +24,18 @@ function Footer() {
             />
             <p className="text-sm w-full flex flex-col gap-y-1">
               <span>
-                At ISDA, we believe in shaping future leaders. As an upskilling
-                platform, co-founded by IIT & IIM alumni, we have developed
-                industry-leading programs across business domains. Our
-                meticulously crafted courses are designed to address the growing
-                need for non-technical roles that drive business growth and
-                decision-making.
+                At ISDA, co-founded by IIT and IIM alumni, we’re building a
+                brighter future for India’s youth – where opportunities are
+                abundant.. Our courses meet the demand for impactful
+                non-technical roles driving growth and decision-making.
               </span>
 
               <span>
-                Unlike many platforms focused solely on tech roles, ISDA is
-                dedicated to empowering professionals to excel in high-impact
-                business roles—whether in management, strategy, or
-                operations—where people skills are the key to success. Our
-                students have gone on to secure rewarding positions in
-                industries like consulting, operations, and business executive
-                roles, with significant earning potential and clear career
-                growth trajectories.
+                Unlike many platforms focused solely on tech roles, ISDA
+                empowers professionals for high-impact business careers—spanning
+                management, strategy, and operations—where interpersonal skills
+                are essential. Our graduates secure rewarding roles with strong
+                earning potential and clear growth paths.
               </span>
             </p>
           </div>
