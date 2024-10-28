@@ -68,8 +68,8 @@ function HeroBanner() {
             >
               Check Your Eligibility!{" "}
               <BlinkingDot
-                blikingDotStyle={"bg-green-400"}
-                dotStyle={"bg-green-500 h-2 w-2"}
+                blikingDotStyle={"!bg-green-400"}
+                dotStyle={"!bg-green-500 !h-2 !w-2"}
                 dotSizeStyle={"items-center justify-center"}
               />
             </PrimaryButton>

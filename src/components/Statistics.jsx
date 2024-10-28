@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useEffect, useState } from "react";
 import ChipsLayout from "./shared/ChipsLayout";
 import useMediaQuery from "@/utils/hooks/useMediaQuery";
 
@@ -32,6 +33,14 @@ const chipsData = [
 
 function Statistics() {
   const isMobile = useMediaQuery("(max-width: 767.98px)");
+
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  if (!isClient) return <></>;
 
   return (
     <section className="w-full pt-28 md:pt-24 px-4">

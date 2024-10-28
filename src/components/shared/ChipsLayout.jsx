@@ -34,15 +34,26 @@ const ChipsLayout = ({
             <div className="flex flex-col gap-y-4 items-center col-span-5">
               <chip.Icon size={48} />
 
-              <div className={`font-semibold ${chipStyle}`}>
-                <p className={subjectStyle}>{chip.subject}</p>
-                <p className={pointStyle}>{chip.point}</p>
+              <div className={`${chipStyle}`}>
+                <p className={cn("font-semibold", subjectStyle)}>
+                  {chip.subject}
+                </p>
+                <p className={cn("font-semibold", pointStyle)}>{chip.point}</p>
               </div>
             </div>
 
-            {isMobile ? (
-              <>
-                {(index == 0 || (index % 2 == 0 && index !== dataLength)) && (
+            {isMobile
+              ? // Render separator only for first item and every even indexed item, ensuring consistent rendering
+                (index === 0 || (index % 2 === 0 && index !== dataLength)) && (
+                  <div
+                    className={cn({
+                      "separator-dark": darkMode,
+                      separator: !darkMode,
+                    })}
+                  />
+                )
+              : // Render separators for all items except the last
+                index < dataLength && (
                   <div
                     className={cn({
                       "separator-dark": darkMode,
@@ -50,19 +61,6 @@ const ChipsLayout = ({
                     })}
                   />
                 )}
-              </>
-            ) : (
-              <>
-                {index < dataLength && (
-                  <div
-                    className={cn({
-                      "separator-dark": darkMode,
-                      separator: !darkMode,
-                    })}
-                  />
-                )}
-              </>
-            )}
           </React.Fragment>
         ))}
       </div>

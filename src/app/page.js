@@ -1,5 +1,4 @@
 "use client";
-import About from "@/components/About";
 import HeroBanner from "@/components/banners/HeroBanner";
 import Educators from "@/components/Educators";
 import FAQ from "@/components/Faqs";
@@ -22,7 +21,6 @@ export default function Home() {
       <Educators />
       <WhySection />
       <TuitionFee />
-      {/* <About /> */}
       <FAQ />
       <Footer />
     </>
