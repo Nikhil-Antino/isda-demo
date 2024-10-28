@@ -38,7 +38,7 @@ function NavBar() {
         "flex items-center gap-x-8 justify-between lg:justify-evenly py-4 px-4 relative sticky -top-1 z-40",
         {
           "bg-primary-dark": !isScrolled,
-          "bg-white": isScrolled,
+          "bg-white border-b-2 border-[#E5E7EB]": isScrolled,
         }
       )}
     >
@@ -116,7 +116,10 @@ function MobileNavBar({ toggleMenu, isScrolled }) {
     <section
       className={cn(
         "absolute top-full left-0 w-full flex flex-col gap-y-8 items-center px-4 py-5 z-10",
-        { "bg-primary-dark": !isScrolled, "bg-white": isScrolled }
+        {
+          "bg-primary-dark": !isScrolled,
+          "bg-white border-b-2 border-[#E5E7EB]": isScrolled,
+        }
       )}
     >
       <ul
