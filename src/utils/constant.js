@@ -16,14 +16,14 @@ export const eligiblityData = [
     description:
       "Complete Application Form + Aptitude Test. Check if you are ready for Global Companies.",
     Icon: RiFileTextLine,
-    badge: "15 min test only",
+    badge: "15 min test",
   },
 
   {
     title: "Secure Your Spot",
     description: "Start your journey with ISDA.",
     Icon: AiOutlineCheckCircle,
-    badge: "100% Placement Guarantee",
+    badge: "100% Placement",
   },
 ];
 

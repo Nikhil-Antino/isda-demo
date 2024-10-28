@@ -10,6 +10,7 @@ import Link from "next/link";
 
 function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const isMobile = useMediaQuery("(max-width: 767.98px)");
 
@@ -21,13 +22,27 @@ function NavBar() {
     setIsOpen(false);
   }, [isMobile]);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const heroSectionHeight = document.getElementById("hero").offsetHeight;
+      setIsScrolled(window.scrollY > heroSectionHeight);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <nav
       className={cn(
-        "flex items-center gap-x-8 justify-between lg:justify-evenly py-4 px-4 relative bg-primary-dark sticky -top-1 z-40"
+        "flex items-center gap-x-8 justify-between lg:justify-evenly py-4 px-4 relative sticky -top-1 z-40",
+        {
+          "bg-primary-dark": !isScrolled,
+          "bg-white": isScrolled,
+        }
       )}
     >
-      <section className="text-white">
+      <section>
         <Image
           src="/images/logo/7.png"
           alt="logo"
@@ -41,17 +56,34 @@ function NavBar() {
       <div className="lg:hidden">
         <button className="outline-none z-1" onClick={toggleMenu}>
           {isOpen ? (
-            <FiX className="h-8 w-8 text-white" />
+            <FiX
+              className={cn("h-8 w-8", {
+                "text-white": !isScrolled,
+                "text-black": isScrolled,
+              })}
+            />
           ) : (
-            <FiMenu className="h-8 w-8 text-white" />
+            <FiMenu
+              className={cn("h-8 w-8", {
+                "text-white": !isScrolled,
+                "text-black": isScrolled,
+              })}
+            />
           )}
         </button>
       </div>
 
-      {isOpen && <MobileNavBar toggleMenu={toggleMenu} />}
+      {isOpen && (
+        <MobileNavBar toggleMenu={toggleMenu} isScrolled={isScrolled} />
+      )}
 
       <section className="hidden lg:block">
-        <ul className="flex items-center gap-x-6 text-white">
+        <ul
+          className={cn("flex items-center gap-x-6", {
+            "text-white": !isScrolled,
+            "text-black": isScrolled,
+          })}
+        >
           <li className="text-lg font-medium">
             <Link href={"#career-path"}>Career Path</Link>
           </li>
@@ -79,10 +111,20 @@ function NavBar() {
 
 export default NavBar;
 
-function MobileNavBar({ toggleMenu }) {
+function MobileNavBar({ toggleMenu, isScrolled }) {
   return (
-    <section className="absolute top-full left-0 w-full bg-primary-dark flex flex-col gap-y-8 items-center px-4 py-5 z-10">
-      <ul className="flex flex-col items-center gap-y-4 text-white">
+    <section
+      className={cn(
+        "absolute top-full left-0 w-full flex flex-col gap-y-8 items-center px-4 py-5 z-10",
+        { "bg-primary-dark": !isScrolled, "bg-white": isScrolled }
+      )}
+    >
+      <ul
+        className={cn("flex flex-col items-center gap-y-4", {
+          "text-white": !isScrolled,
+          "text-black": isScrolled,
+        })}
+      >
         <li className="text-lg font-medium" onClick={toggleMenu}>
           <Link href={"#career-path"}>Career Path</Link>
         </li>

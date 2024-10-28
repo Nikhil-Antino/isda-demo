@@ -151,10 +151,68 @@ function SuccessStories() {
             }}
             className="flex gap-x-8"
           >
-            {successStoriesData.map((item, idx) => (
+            {successStoriesData.slice(0, 3).map((item, idx) => (
               <WallCard key={idx} {...item} />
             ))}
           </Masonry>
+        </div>
+
+        <div className="grid xl:grid-cols-7 gap-8">
+          <div className="xl:col-span-3 xl:w-full xl:h-full">
+            <HighlightedSuccessCard
+              review={`Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Officiis magni, ad amet, explicabo nobis placeat vero ipsa in
+              voluptas quo, neque quas doloremque repudiandae blanditiis
+              voluptates aperiam iusto. At, itaque?`}
+              name={"Imyush Shukla"}
+              rating={4.8}
+              imagePath={"/images/success-stories/4.png"}
+            />
+          </div>
+
+          <div className="grid md:hidden w-full">
+            <SliderComponent
+              swiperOptions={{
+                breakpoints: {
+                  320: {
+                    slidesPerView: 1,
+                    spaceBetween: 16,
+                    slidesPerGroup: 1,
+                  },
+                },
+              }}
+              buttonStyle={{
+                size: 24,
+                buttonClass: "col-span-6 rounded-full",
+                leftButton: "place-self-end",
+                rightButton: "place-self-start",
+              }}
+              spaceFromCarousel="12px"
+              paginationLayout="flex items-center gap-x-[12px] col-span-8 md:col-span-2 place-self-center justify-center"
+            >
+              {successStoriesData.slice(0, 4).map((successStory, index) => (
+                <WallCard
+                  key={index}
+                  name={successStory.name}
+                  review={successStory.review}
+                  rating={successStory.rating}
+                  imagePath={successStory.imagePath}
+                />
+              ))}
+            </SliderComponent>
+          </div>
+
+          <div className="hidden md:grid grid-cols-2 grid-rows-2 gap-8 w-full xl:col-span-4">
+            {successStoriesData.slice(0, 4).map((successStory, index) => (
+              <SuccessCard
+                key={index}
+                name={successStory.name}
+                review={successStory.review}
+                rating={successStory.rating}
+                imagePath={successStory.imagePath}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </section>

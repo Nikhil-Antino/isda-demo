@@ -14,14 +14,21 @@ function Footer() {
         <div className="flex flex-col md:flex-row items-center justify-between mb-8">
           {/* Brand Logo with Description */}
           <div className="flex flex-col xl:flex-row items-center space-x-4 w-full">
-            <Image
-              src="/images/logo/7.png"
-              alt="logo"
-              width={250}
-              height={40}
-              objectFit="contain"
-              className="cursor-pointer"
-            />
+            <div className="flex flex-col gap-y-2">
+              <Image
+                src="/images/logo/7.png"
+                alt="logo"
+                width={300}
+                height={40}
+                objectFit="contain"
+                className="cursor-pointer"
+              />
+              <p className="font-semmibold bg-gradient-to-r from-[#fac749] via-[#ffa323] to-[#fb930e] bg-clip-text text-transparent flex items-center gap-x-2">
+                Shaping Skills{" "}
+                <span className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-[#fac749] via-[#ffa323] to-[#fb930e]" />{" "}
+                Securing Future
+              </p>
+            </div>
             <p className="text-sm w-full flex flex-col gap-y-1">
               <span>
                 At ISDA, co-founded by IIT and IIM alumni, we’re building a

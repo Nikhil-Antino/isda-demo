@@ -13,13 +13,18 @@ import BlinkingDot from "../shared/BlinkingDot";
 
 function HeroBanner() {
   return (
-    <section className="bg-primary-dark w-full flex flex-col justify-center items-center relative">
+    <section
+      id="hero"
+      className="bg-primary-dark w-full flex flex-col justify-center items-center relative"
+    >
       <div className="lg:max-w-[1360px] grid lg:grid-cols-12 pt-12 pb-44 px-4 items-center w-full">
         <div className="lg:col-span-7 flex flex-col gap-y-12">
           <div className="flex flex-col gap-y-4">
             <h1 className="text-white text-2xl lg:text-4xl font-bold text-center lg:text-left">
               <p className="flex items-center flex-col lg:flex-row gap-2">
-                <span className="text-secondary">Land your first Job</span>{" "}
+                <span className="bg-gradient-to-r from-[#fac749] via-[#ffa323] to-[#fb930e] bg-clip-text text-transparent">
+                  Land Your First Job
+                </span>{" "}
                 <span>
                   {" "}
                   in High{" "}
@@ -38,11 +43,14 @@ function HeroBanner() {
             </h1>
 
             <p className="text-base lg:text-lg text-center lg:text-start text-white font-regular flex flex-col lg:items-start gap-y-0.5">
-              <span>Step into global careers, confidently!</span>
               <span>
-                Master Client Management, Negotiation Skills, and Business
-                Analytics with GenAI.
+                Accelerated Business Executive Program to Master Client
+                Management
               </span>
+              {/* <span>
+                Negotiation Skills, and Business Analytics with GenAI.
+              </span> */}
+              <span>Step into global careers, confidently!</span>
             </p>
           </div>
 

@@ -125,19 +125,19 @@ function HowItWorks() {
                 )}
               </div>
 
-              <div className="place-self-center xl:col-span-2 flex flex-col items-center gap-y-6">
-                <p className="text-gray-600 text-sm text-center">
-                  <span className="font-semibold text-black">
-                    Fast-Track to Job Interviews:{" "}
-                  </span>
-                  <span>
-                    By Week 12, you’ll be ready to start your interviews with
-                    top companies like Amazon, Flipkart, Wipro, and more.
-                  </span>
-                </p>
+              {/* <div className="place-self-center xl:col-span-2 flex flex-col items-center gap-y-6">
+                  <p className="text-gray-600 text-sm text-center">
+                    <span className="font-semibold text-black">
+                      Fast-Track to Job Interviews:{" "}
+                    </span>
+                    <span>
+                      By Week 12, you’ll be ready to start your interviews with
+                      top companies like Amazon, Flipkart, Wipro, and more.
+                    </span>
+                  </p>
 
-                <PrimaryButton>Explore Curriculum</PrimaryButton>
-              </div>
+                  <PrimaryButton>Explore Curriculum</PrimaryButton>
+                </div> */}
             </div>
           </PointerContainer>
 
@@ -316,12 +316,12 @@ function CertificateSection() {
         />
       </div>
 
-      <PrimaryButton
+      {/* <PrimaryButton
         className={"place-self-center lg:col-span-12"}
         size={"large"}
       >
         Get Certified
-      </PrimaryButton>
+      </PrimaryButton> */}
     </div>
   );
 }

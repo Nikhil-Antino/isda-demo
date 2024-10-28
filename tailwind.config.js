@@ -16,6 +16,7 @@ module.exports = {
         tertiary: "#fff9f0ff",
         quaternary: "#ff595eee",
         grayshade: "#F9FAFB",
+        purple: "#7514f5",
       },
 
       animation: {

@@ -139,8 +139,8 @@ function NewFeeCard({
         className={cn(
           "relative rounded-xl p-6 flex flex-col gap-y-8 border-2",
           {
-            "border-primary": isPrimary,
-            "border-quaternary": !isPrimary,
+            "border-primary": !isPrimary,
+            "border-quaternary": isPrimary,
           }
         )}
       >
@@ -148,7 +148,7 @@ function NewFeeCard({
           <span
             className={cn(
               "absolute -top-4 right-4 rounded-full px-4 py-1 text-sm text-white",
-              { "bg-primary": isPrimary, "bg-quaternary": !isPrimary }
+              { "bg-primary": !isPrimary, "bg-quaternary": isPrimary }
             )}
           >
             {type}
@@ -158,8 +158,8 @@ function NewFeeCard({
         <div className="flex flex-col items-start">
           <h3
             className={cn("text-2xl font-semibold", {
-              "text-primary": isPrimary,
-              "text-quaternary": !isPrimary,
+              "text-primary": !isPrimary,
+              "text-quaternary": isPrimary,
             })}
           >
             {title}
@@ -170,8 +170,8 @@ function NewFeeCard({
         <div className="flex flex-col items-center gap-y-2">
           <h4
             className={cn("text-4xl font-semibold", {
-              "text-primary": isPrimary,
-              "text-quaternary": !isPrimary,
+              "text-primary": !isPrimary,
+              "text-quaternary": isPrimary,
             })}
           >
             INR. {price.toLocaleString("en-IN")}
@@ -190,8 +190,8 @@ function NewFeeCard({
                   <FaCheck
                     size={18}
                     className={cn({
-                      "text-primary": isPrimary,
-                      "text-quaternary": !isPrimary,
+                      "text-primary": !isPrimary,
+                      "text-quaternary": isPrimary,
                     })}
                   />
                   <p className="text-gray-600 text-sm" key={index}>
@@ -204,11 +204,11 @@ function NewFeeCard({
         )}
 
         {isPrimary ? (
+          <PrimaryButton>{buttonCTA || "Enroll Now"}</PrimaryButton>
+        ) : (
           <SecondaryButtonColour className="!bg-primary !text-white">
             {buttonCTA || "Enroll Now"}
           </SecondaryButtonColour>
-        ) : (
-          <PrimaryButton>{buttonCTA || "Enroll Now"}</PrimaryButton>
         )}
       </div>
 
