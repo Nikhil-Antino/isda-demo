@@ -186,7 +186,7 @@ function NewFeeCard({
 
             <div className="grid grid-cols-2 gap-x-4">
               {stats.map((stat, index) => (
-                <div className="flex items-center gap-x-2">
+                <div className="flex items-center gap-x-2" key={index}>
                   <FaCheck
                     size={18}
                     className={cn({
@@ -194,9 +194,7 @@ function NewFeeCard({
                       "text-quaternary": isPrimary,
                     })}
                   />
-                  <p className="text-gray-600 text-sm" key={index}>
-                    {stat}
-                  </p>
+                  <p className="text-gray-600 text-sm">{stat}</p>
                 </div>
               ))}
             </div>
