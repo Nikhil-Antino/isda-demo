@@ -45,7 +45,7 @@ function HeroBanner() {
             <p className="text-base lg:text-lg text-center lg:text-start text-white font-regular flex flex-col lg:items-start gap-y-0.5">
               <span>Step into global careers, confidently!</span>
               <span>
-                Accelerated Executive Program to Master Leadership, and
+                Business Executive Program to Master Communication, and
                 Analytics with GenAI.
               </span>
               {/* <span>

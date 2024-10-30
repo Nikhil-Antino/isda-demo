@@ -151,6 +151,10 @@ function MobileNavBar({ toggleMenu, isScrolled }) {
           <Link href={"#program"}>Program</Link>
         </li>
 
+        <li className="text-lg font-medium">
+          <Link href={"#why-isda"}>Why ISDA?</Link>
+        </li>
+
         <li className="text-lg font-medium" onClick={toggleMenu}>
           <Link href={"#FAQs"}>FAQs</Link>
         </li>
