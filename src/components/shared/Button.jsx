@@ -19,22 +19,52 @@ const VARIANTS = {
 };
 
 const Button = forwardRef(
-  ({ variant = "primary", children, customStyle, size, ...props }, ref) => {
+  (
+    {
+      variant = "primary",
+      children,
+      customStyle,
+      size,
+      isCTA = false,
+      ...props
+    },
+    ref
+  ) => {
     const baseStyles = "rounded-lg font-semibold focus:outline-none";
 
+    if (isCTA) {
+      return (
+        <button
+          ref={ref}
+          className={cn(
+            baseStyles,
+            SIZE_CONST[size],
+            VARIANTS[variant],
+            customStyle
+          )}
+          {...props}
+        >
+          {children}
+        </button>
+      );
+    }
+
     return (
-      <button
+      <a
         ref={ref}
         className={cn(
+          "text-center",
           baseStyles,
           SIZE_CONST[size],
           VARIANTS[variant],
           customStyle
         )}
+        href="https://app.isda.academy/"
+        target="_blank"
         {...props}
       >
         {children}
-      </button>
+      </a>
     );
   }
 );

@@ -27,7 +27,7 @@ export function SuccessCard({
       }}
     >
       <div className="flex flex-col gap-y-1 justify-between col-span-2">
-        <p className="text-sm text-gray-700 font-regular line-clamp-4">
+        <p className="text-sm text-gray-700 font-regular line-clamp-6">
           {review}
         </p>
 
@@ -158,7 +158,7 @@ export function VideoCard({
   return (
     <div
       className={cn(
-        "grid gap-y-6 rounded-xl relative border bg-gradient-to-b from-[#fac749] via-[#ffa323] to-[#fb930e] border-[#E5E7EB] justify-items-center overflow-hidden",
+        "flex flex-col gap-y-6 rounded-xl relative border bg-gradient-to-b from-[#fac749] via-[#ffa323] to-[#fb930e] border-[#E5E7EB] items-center overflow-hidden",
         customStyle
       )}
     >
@@ -180,12 +180,12 @@ export function VideoCard({
 
       <p className="text-center text-3xl font-semibold px-4">{review}</p>
 
-      <div className={cn("self-end", imagePositionStyle)}>
+      <div className={cn("mt-auto", imagePositionStyle)}>
         <Image
           src={`/images/success-stories/${profileImage}`}
           width={250}
           height={250}
-          objectFit="contain"
+          objectFit="cover"
         />
       </div>
     </div>

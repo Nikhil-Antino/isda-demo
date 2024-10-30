@@ -3,7 +3,6 @@
 import HeroBanner from "@/components/banners/HeroBanner";
 import Educators from "@/components/Educators";
 import FAQ from "@/components/Faqs";
-import Footer from "@/components/Footer";
 import HowItWorks from "@/components/HowItWorks";
 import JobSection from "@/components/JobSection";
 import Statistics from "@/components/Statistics";
@@ -23,7 +22,6 @@ export default function Home() {
       <WhySection />
       <TuitionFee />
       <FAQ />
-      <Footer />
     </>
   );
 }

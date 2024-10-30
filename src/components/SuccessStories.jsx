@@ -38,7 +38,7 @@ function SuccessStories() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 md:grid-rows-2 gap-x-8 gap-y-10">
+        <div className="grid md:grid-cols-3 md:grid-rows-3 gap-x-8 gap-y-10">
           {/* <div className="hidden md:grid grid-cols-2 grid-rows-2 gap-8 w-full xl:col-span-4"> */}
 
           {successStoriesNewData.slice(0, 7).map((successStory, index) => {
@@ -48,9 +48,7 @@ function SuccessStories() {
                   key={index}
                   {...successStory}
                   customStyle={"row-span-2"}
-                  imagePositionStyle={
-                    index === 2 ? "place-self-end" : "place-self-start"
-                  }
+                  imagePositionStyle={index === 2 ? "self-end" : "self-start"}
                   playerHeight={index === 2 ? "750px" : "590px"}
                 />
               );

@@ -49,6 +49,7 @@ const FAQ = () => {
                     "!bg-transparent !text-quaternary !border-quaternary hover:!bg-quaternary hover:!text-white":
                       active.category !== item.category,
                   })}
+                  isCTA
                 >
                   {item.category}
                 </PrimaryButton>

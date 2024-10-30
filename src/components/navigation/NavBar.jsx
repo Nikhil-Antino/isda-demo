@@ -24,8 +24,13 @@ function NavBar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const heroSectionHeight = document.getElementById("hero").offsetHeight;
-      setIsScrolled(window.scrollY > heroSectionHeight);
+      const element = document.getElementById("hero");
+
+      if (element) {
+        const heroSectionHeight = element.offsetHeight;
+
+        setIsScrolled(window.scrollY > heroSectionHeight);
+      }
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -43,14 +48,16 @@ function NavBar() {
       )}
     >
       <section>
-        <Image
-          src={isScrolled ? "/images/logo/8.png" : "/images/logo/7.png"}
-          alt="logo"
-          width={250}
-          height={40}
-          objectFit="contain"
-          className="cursor-pointer"
-        />
+        <Link href={"/"}>
+          <Image
+            src={isScrolled ? "/images/logo/8.png" : "/images/logo/7.png"}
+            alt="logo"
+            width={250}
+            height={40}
+            objectFit="contain"
+            className="cursor-pointer"
+          />
+        </Link>
       </section>
 
       <div className="lg:hidden">

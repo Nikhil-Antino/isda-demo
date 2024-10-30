@@ -14,7 +14,7 @@ function Footer() {
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center justify-between mb-8">
           {/* Brand Logo with Description */}
-          <div className="flex flex-col xl:flex-row items-center space-x-4 w-full">
+          <div className="flex flex-col xl:flex-row items-center space-x-4 w-full gap-y-2">
             <div className="flex flex-col gap-y-2">
               <Image
                 src="/images/logo/7.png"
@@ -92,6 +92,19 @@ function Footer() {
               Koramangala, Bengaluru, Karnataka
             </p>
             <p>Zip Code: 560095</p>
+          </div>
+
+          {/* Privacy Policy & Terms */}
+          <div>
+            <h3 className="text-lg font-bold mb-4">Policies</h3>
+            <ul>
+              <li>
+                <Link href={"/privacy-policy"}>Privacy Statement</Link>
+              </li>
+              <li>
+                <Link href={"/term-of-use"}>Term of Use</Link>
+              </li>
+            </ul>
           </div>
         </div>
 

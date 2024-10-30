@@ -12,6 +12,8 @@ import {
 } from "./shared/Button";
 import Image from "next/image";
 import Badge from "./shared/Badge";
+import PriceCustomLogo from "./shared/PriceCustomLogo";
+import { IoWalletSharp } from "react-icons/io5";
 
 const courseData = [
   {
@@ -157,15 +159,11 @@ function NewFeeCard({
           </span>
         )}
 
-        <Image
-          src={"/images/logo/credit-card.svg"}
-          width={30}
-          height={10}
-          objectFit="contain"
-          alt="credit-logo"
-        />
-
-        {/* <CreditCardLogo colourCode={isPrimary ? "#ff595eee" : "#1463ff"} /> */}
+        {isPrimary ? (
+          <IoWalletSharp size={28} className="text-quaternary" />
+        ) : (
+          <PriceCustomLogo fillColor={"#1463ff"} />
+        )}
 
         <div className="flex flex-col items-start">
           <h3
