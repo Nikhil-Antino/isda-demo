@@ -1,63 +1,19 @@
 import React from "react";
 import SliderComponent from "./shared/CustomSlider";
-import { MdArrowBackIosNew, MdArrowForwardIos } from "react-icons/md";
 import Badge from "./shared/Badge";
 import { IoHeart } from "react-icons/io5";
 
 import {
   HighlightedSuccessCard,
   SuccessCard,
+  VideoCard,
   WallCard,
 } from "./shared/SuccessCard";
 
 import Masonry from "react-masonry-css";
+import { successStoriesData, successStoriesNewData } from "@/utils/constant";
 
-const successStoriesData = [
-  {
-    name: "John Doe",
-    review:
-      "I had the best experience working with them. We were very impressed with the quality of the service.",
-    rating: 4,
-    imagePath: "/images/success-stories/4.png",
-  },
-  {
-    name: "Jane Smith",
-    review:
-      "I had the best experience working with them. We were very impressed with the quality of the service.",
-    rating: 4,
-    imagePath: "/images/success-stories/5.png",
-  },
-  {
-    name: "Michael Johnson",
-    review:
-      "I had the best experience working with them. We were very impressed with the quality of the service.",
-    rating: 4,
-    imagePath: "/images/success-stories/5.png",
-  },
-  {
-    name: "Sarah Williams",
-    review:
-      "I had the best experience working with them. We were very impressed with the quality of the service.",
-    rating: 4,
-    imagePath: "/images/success-stories/4.png",
-  },
-
-  {
-    name: "Sarah Williams",
-    review:
-      "I had the best experience working with them. We were very impressed with the quality of the service.",
-    rating: 4,
-    imagePath: "/images/success-stories/4.png",
-  },
-
-  {
-    name: "Michael Johnson",
-    review:
-      "I had the best experience working with them. We were very impressed with the quality of the service.",
-    rating: 4,
-    imagePath: "/images/success-stories/5.png",
-  },
-];
+import cn from "classnames";
 
 function SuccessStories() {
   return (
@@ -82,52 +38,29 @@ function SuccessStories() {
           </p>
         </div>
 
-        <div className="grid xl:grid-cols-7 gap-8">
-          <div className="grid md:hidden w-full">
-            <SliderComponent
-              swiperOptions={{
-                breakpoints: {
-                  320: {
-                    slidesPerView: 1,
-                    spaceBetween: 16,
-                    slidesPerGroup: 1,
-                  },
-                },
-              }}
-              buttonStyle={{
-                size: 24,
-                buttonClass: "col-span-6 rounded-full",
-                leftButton: "place-self-end",
-                rightButton: "place-self-start",
-              }}
-              spaceFromCarousel="12px"
-              paginationLayout="flex items-center gap-x-[12px] col-span-8 md:col-span-2 place-self-center justify-center"
-            >
-              {successStoriesData.slice(0, 4).map((successStory, index) => (
-                <WallCard
+        <div className="grid md:grid-cols-3 md:grid-rows-2 gap-x-8 gap-y-10">
+          {/* <div className="hidden md:grid grid-cols-2 grid-rows-2 gap-8 w-full xl:col-span-4"> */}
+
+          {successStoriesNewData.slice(0, 7).map((successStory, index) => {
+            if (index === 2 || index === 3) {
+              return (
+                <VideoCard
                   key={index}
-                  name={successStory.name}
-                  review={successStory.review}
-                  rating={successStory.rating}
-                  imagePath={successStory.imagePath}
+                  {...successStory}
+                  customStyle={"row-span-2"}
+                  imagePositionStyle={
+                    index === 2 ? "place-self-end" : "place-self-start"
+                  }
+                  playerHeight={index === 2 ? "750px" : "590px"}
                 />
-              ))}
-            </SliderComponent>
-          </div>
+              );
+            }
 
-          <div className="hidden md:grid grid-cols-2 grid-rows-2 gap-8 w-full xl:col-span-4">
-            {successStoriesData.slice(0, 4).map((successStory, index) => (
-              <SuccessCard
-                key={index}
-                name={successStory.name}
-                review={successStory.review}
-                rating={successStory.rating}
-                imagePath={successStory.imagePath}
-              />
-            ))}
-          </div>
+            return <SuccessCard key={index} {...successStory} />;
+          })}
+          {/* </div> */}
 
-          <div className="xl:col-span-3 xl:w-full xl:h-full">
+          {/* <div className="xl:col-span-3 xl:w-full xl:h-full">
             <HighlightedSuccessCard
               review={`Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Officiis magni, ad amet, explicabo nobis placeat vero ipsa in
@@ -137,10 +70,50 @@ function SuccessStories() {
               rating={4.8}
               imagePath={"/images/success-stories/4.png"}
             />
-          </div>
+          </div> */}
         </div>
 
-        <div className="w-full">
+        <div className="grid w-full">
+          <SliderComponent
+            swiperOptions={{
+              breakpoints: {
+                320: {
+                  slidesPerView: 1,
+                  spaceBetween: 16,
+                  slidesPerGroup: 1,
+                },
+
+                768: {
+                  slidesPerView: 2,
+                  spaceBetween: 16,
+                  slidesPerGroup: 2,
+                },
+
+                1024: {
+                  slidesPerView: 3,
+                  spaceBetween: 16,
+                  slidesPerGroup: 3,
+                },
+              },
+            }}
+            buttonStyle={{
+              size: 24,
+              buttonClass: "col-span-6 rounded-full",
+              leftButton: "place-self-end",
+              rightButton: "place-self-start",
+            }}
+            spaceFromCarousel="12px"
+            paginationLayout="flex items-center gap-x-[12px] col-span-8 md:col-span-2 place-self-center justify-center"
+          >
+            {successStoriesNewData
+              .slice(6, successStoriesNewData.length)
+              .map((successStory, index) => (
+                <WallCard key={index} {...successStory} />
+              ))}
+          </SliderComponent>
+        </div>
+
+        {/* <div className="w-full">
           <Masonry
             breakpointCols={{
               default: 3,
@@ -155,9 +128,9 @@ function SuccessStories() {
               <WallCard key={idx} {...item} />
             ))}
           </Masonry>
-        </div>
+        </div> */}
 
-        <div className="grid xl:grid-cols-7 gap-8">
+        {/* <div className="grid xl:grid-cols-7 gap-8">
           <div className="xl:col-span-3 xl:w-full xl:h-full">
             <HighlightedSuccessCard
               review={`Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -213,7 +186,7 @@ function SuccessStories() {
               />
             ))}
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

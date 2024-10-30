@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import cn from "classnames";
 
 const SIZE_CONST = {
-  // '2xl': 'text-lg leading-7 py-4 px-6',
+  // "2xl": "text-lg leading-7 py-4 px-6",
   xl: "text-base leading-6 py-3 px-5",
   large: "text-base leading-6 py-2.5 px-[18px]",
   medium: "text-sm leading-5 py-2.5 px-4",
@@ -20,7 +20,7 @@ const VARIANTS = {
 
 const Button = forwardRef(
   ({ variant = "primary", children, customStyle, size, ...props }, ref) => {
-    const baseStyles = "rounded-lg font-medium focus:outline-none";
+    const baseStyles = "rounded-lg font-semibold focus:outline-none";
 
     return (
       <button

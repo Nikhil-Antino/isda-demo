@@ -75,9 +75,9 @@ function TuitionFee() {
               <React.Fragment key={index}>
                 {index === 1 && (
                   <div className="flex flex-col items-center place-self-center lg:col-span-3">
-                    <p className="text-gray-600 text-sm text-center">
+                    {/* <p className="text-gray-600 text-sm text-center">
                       You pay this only after getting placed
-                    </p>
+                    </p> */}
                     <Image
                       src={"/images/dotted-arrow.png"}
                       width={100}
@@ -85,6 +85,7 @@ function TuitionFee() {
                       objectFit="cover"
                       layout="responsive"
                       className="hidden lg:block"
+                      alt="dotted arrow"
                     />
 
                     <Image
@@ -93,6 +94,7 @@ function TuitionFee() {
                       height={50}
                       objectFit="cover"
                       className="rotate-45 lg:hidden"
+                      alt="arrow"
                     />
                   </div>
                 )}
@@ -154,6 +156,16 @@ function NewFeeCard({
             {type}
           </span>
         )}
+
+        <Image
+          src={"/images/logo/credit-card.svg"}
+          width={30}
+          height={10}
+          objectFit="contain"
+          alt="credit-logo"
+        />
+
+        {/* <CreditCardLogo colourCode={isPrimary ? "#ff595eee" : "#1463ff"} /> */}
 
         <div className="flex flex-col items-start">
           <h3

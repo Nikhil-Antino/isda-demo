@@ -100,7 +100,7 @@ function EducatorsCard({
             <p className="text-sm font-medium text-gray-600">{profession}</p>
           </div>
 
-          <Link passHref href={profileUrl} legacyBehavior target="_blank">
+          <Link passHref href={profileUrl} target="_blank">
             <FaLinkedin size={28} className="text-primary cursor-pointer" />
           </Link>
         </div>

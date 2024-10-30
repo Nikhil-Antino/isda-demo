@@ -143,7 +143,7 @@ function HowItWorks() {
 
           <PointerContainer
             step={3}
-            title={"Get Certified & Receive an Assessment Report"}
+            title={"Get Certified. Be Valued Worldwide"}
             description={
               "Get ISDA certified and boost your confidence to tackle any job!"
             }
@@ -161,7 +161,7 @@ function HowItWorks() {
           >
             <div className="grid lg:grid-cols-2 gap-y-6 gap-x-10 py-2 items-center relative">
               <div
-                className="rounded-2xl p-4 xl:p-8 grid grid-cols-2 grid-rows-2 gap-4 xl:gap-6 rounded-xl relative z-10 bg-white"
+                className="rounded-2xl p-4 xl:p-8 xl:pr-3 grid grid-cols-2 grid-rows-2 gap-4 xl:gap-6 rounded-xl relative z-10 bg-white"
                 style={{
                   boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px",
                 }}
@@ -196,7 +196,10 @@ function HowItWorks() {
               <div className=" absolute top-40 right-0 h-[230px] left-1/3 w-20 rounded-full background-gradient blur-[200px] md:h-20 md:w-56"></div>
 
               <PrimaryButton
-                className={"place-self-center lg:col-span-2 mb-8 mt-10"}
+                className={
+                  "place-self-center lg:col-span-2 mb-8 mt-10 lg:mr-14"
+                }
+                size={"large"}
               >
                 Start Your Journey
               </PrimaryButton>

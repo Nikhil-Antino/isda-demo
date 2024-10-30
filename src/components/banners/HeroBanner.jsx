@@ -43,14 +43,14 @@ function HeroBanner() {
             </h1>
 
             <p className="text-base lg:text-lg text-center lg:text-start text-white font-regular flex flex-col lg:items-start gap-y-0.5">
+              <span>Step into global careers, confidently!</span>
               <span>
-                Accelerated Business Executive Program to Master Client
-                Management
+                Accelerated Executive Program to Master Leadership, and
+                Analytics with GenAI.
               </span>
               {/* <span>
                 Negotiation Skills, and Business Analytics with GenAI.
               </span> */}
-              <span>Step into global careers, confidently!</span>
             </p>
           </div>
 
@@ -59,14 +59,14 @@ function HeroBanner() {
               size={"large"}
               customStyle={"flex items-center gap-x-3"}
             >
-              Check Your Eligibility!{" "}
+              Check Your Eligibility{" "}
               <BlinkingDot
                 blikingDotStyle={"!bg-green-400"}
                 dotStyle={"!bg-green-500 !h-2 !w-2"}
                 dotSizeStyle={"items-center justify-center"}
               />
             </PrimaryButton>
-            <SecondaryButton size={"large"}>Download Brochure!</SecondaryButton>
+            <SecondaryButton size={"large"}>Download Brochure</SecondaryButton>
           </div>
 
           <div className="flex lg:hidden items-center justify-center gap-4">
@@ -74,14 +74,14 @@ function HeroBanner() {
               size={"small"}
               customStyle={"flex items-center gap-x-3"}
             >
-              Check Your Eligibility!{" "}
+              Check Your Eligibility{" "}
               <BlinkingDot
                 blikingDotStyle={"!bg-green-400"}
                 dotStyle={"!bg-green-500 !h-2 !w-2"}
                 dotSizeStyle={"items-center justify-center"}
               />
             </PrimaryButton>
-            <SecondaryButton size={"small"}>Download Brochure!</SecondaryButton>
+            <SecondaryButton size={"small"}>Download Brochure</SecondaryButton>
           </div>
 
           <div className="flex items-center flex-wrap justify-between lg:justify-start gap-6 text-white">

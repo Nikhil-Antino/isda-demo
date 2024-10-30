@@ -6,6 +6,7 @@ import {
   FaInstagram,
 } from "react-icons/fa";
 import Image from "next/image"; // Assuming you're using Next.js Image component
+import Link from "next/link";
 
 function Footer() {
   return (
@@ -53,8 +54,8 @@ function Footer() {
           <div>
             <h3 className="text-lg font-bold mb-4">Contact Us</h3>
             <ul>
-              <li>Email: info@example.com</li>
-              <li>Phone: +123 456 7890</li>
+              <li>Email: connect@isda.academy</li>
+              <li>Phone: +91 99021 56768</li>
             </ul>
           </div>
 
@@ -62,32 +63,42 @@ function Footer() {
           <div>
             <h3 className="text-lg font-bold mb-4">Follow Us</h3>
             <div className="flex justify-center md:justify-start space-x-4">
-              <a href="#" className="hover:text-white">
+              {/* <a href="#" className="hover:text-white">
                 <FaFacebookF />
               </a>
               <a href="#" className="hover:text-white">
                 <FaTwitter />
-              </a>
-              <a href="#" className="hover:text-white">
+              </a> */}
+              <Link
+                className="hover:text-white"
+                href={
+                  "https://www.linkedin.com/showcase/isda-indian-skill-development-academy/?viewAsMember=true"
+                }
+                target="_blank"
+              >
                 <FaLinkedinIn />
-              </a>
-              <a href="#" className="hover:text-white">
+              </Link>
+              {/* <a href="#" className="hover:text-white">
                 <FaInstagram />
-              </a>
+              </a> */}
             </div>
           </div>
 
           {/* Address */}
           <div>
             <h3 className="text-lg font-bold mb-4">Our Address</h3>
-            <p>123 Street Name, City, Country</p>
-            <p>Zip Code: 12345</p>
+            <p>
+              2nd Floor, Bizzhub Coworking, A/7, KHB Colony, 5th Block,
+              Koramangala, Bengaluru, Karnataka
+            </p>
+            <p>Zip Code: 560095</p>
           </div>
         </div>
 
         <div className="mt-8 border-t border-gray-700 pt-4 text-center text-sm">
           <p>
-            &copy; {new Date().getFullYear()} Your Company. All Rights Reserved.
+            &copy; {new Date().getFullYear()} Indian Skill Development Academy.
+            All Rights Reserved.
           </p>
         </div>
       </div>

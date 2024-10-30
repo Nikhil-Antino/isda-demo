@@ -44,7 +44,7 @@ function NavBar() {
     >
       <section>
         <Image
-          src="/images/logo/7.png"
+          src={isScrolled ? "/images/logo/8.png" : "/images/logo/7.png"}
           alt="logo"
           width={250}
           height={40}
@@ -84,19 +84,23 @@ function NavBar() {
             "text-black": isScrolled,
           })}
         >
-          <li className="text-lg font-medium">
+          <li className="text-lg font-semibold">
             <Link href={"#career-path"}>Career Path</Link>
           </li>
 
-          <li className="text-lg font-medium">
+          <li className="text-lg font-semibold">
             <Link href={"#success-stories"}>Success Stories</Link>
           </li>
 
-          <li className="text-lg font-medium">
+          <li className="text-lg font-semibold">
             <Link href={"#program"}>Program</Link>
           </li>
 
-          <li className="text-lg font-medium">
+          <li className="text-lg font-semibold">
+            <Link href={"#why-isda"}>Why ISDA?</Link>
+          </li>
+
+          <li className="text-lg font-semibold">
             <Link href={"#FAQs"}>FAQs</Link>
           </li>
         </ul>

@@ -15,12 +15,12 @@ const chipsData = [
     Icon: FaCalendarDays,
   },
   {
-    point: "Avereage Time to Job",
+    point: "Average Time to Job",
     subject: "12 Weeks",
     Icon: PiClockCountdownFill,
   },
   {
-    point: "Job guarantee",
+    point: "Job Guarantee",
     subject: "100%",
     Icon: IoShieldCheckmarkSharp,
   },

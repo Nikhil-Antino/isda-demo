@@ -1,4 +1,5 @@
 "use client";
+
 import HeroBanner from "@/components/banners/HeroBanner";
 import Educators from "@/components/Educators";
 import FAQ from "@/components/Faqs";

@@ -45,7 +45,7 @@ const whyData = [
 
 function WhySection() {
   return (
-    <section className="w-full py-16 md:py-24 px-4">
+    <section id="why-isda" className="w-full py-16 md:py-24 px-4">
       <div className="xl:max-w-[1360px] xl:mx-auto flex flex-col items-center gap-y-16">
         <div className="flex flex-col items-center gap-y-2">
           <h2 className="text-xl md:text-3xl font-semibold text-center">

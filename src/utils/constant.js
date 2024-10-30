@@ -13,8 +13,7 @@ import { LiaSearchSolid } from "react-icons/lia";
 export const eligiblityData = [
   {
     title: "Apply Online",
-    description:
-      "Complete Application Form + Aptitude Test. Check if you are ready for Global Companies.",
+    description: "Complete Application Form + Aptitude Test.",
     Icon: RiFileTextLine,
     badge: "15 min test",
   },
@@ -235,20 +234,20 @@ export const jobStats = [
 
   {
     subject: "Average Time to Job",
-    point: "15 weeks",
+    point: "12 weeks",
     logoPath: "/images/logo/rush.svg",
     Icon: null,
   },
 
   {
-    subject: "Successful transitions for Freshers",
+    subject: "Successful Freshers",
     point: "3000+",
     logoPath: "/images/logo/leadership.svg",
     Icon: null,
   },
 
   {
-    subject: "Business Roles across Global Companies",
+    subject: "Business Job Roles",
     point: "50+",
     logoPath: null,
     Icon: AiOutlineGlobal,
@@ -284,21 +283,21 @@ export const educatorsData = [
     profileUrl: "https://www.linkedin.com/in/lalita-choudhary-a9ab911b3/",
   },
   {
-    profile: null,
+    profile: "/images/educators/6.png",
     name: "Gautam Rawat",
-    profession: "IIM Lucknow | SPA, Delhi | JLL | Quickr",
+    profession: "IIM Lucknow | SPA, Delhi | JLL | Quikr",
     description:
-      "IIM alumnus with 10+ years of experience excellence across Ed-Tech, and Real Estate. His creative skills in designing student learning products make learners' lives easier. Passionate about simplifying learning experiences for the best outcomes.",
+      "IIM alumnus with 10+ years of experience excellence across Ed-Tech, and Real Estate. His creative skills in designing student learning products make learners' lives easier. Passionate about simplifying learning.",
     quote: "Creative Solutions, Seamless Learning!",
     profileUrl: "https://www.linkedin.com/in/grawat2/",
   },
   {
     profile: "/images/educators/5.png",
     name: "Monica Balakrishna",
-    profession: "Empowering Talent, Transforming Futures!",
+    profession: "Mount Carmel | Newcastle University | AlmaBetter",
     description:
-      "A powerhouse in international business, forges impactful recruiter partnerships, connecting global companies with right talent. Has a relentless pursuit towards operational excellence, has propelled careers of 2000+ learners.",
-    quote: "Your Success, Our Mission!",
+      "A powerhouse in international business, forges impactful recruiter partnerships, connecting global companies with right talent. Has propelled careers of 2000+ learners.",
+    quote: "Empowering Talent, Transforming Futures!",
     profileUrl: "https://www.linkedin.com/in/monica-balakrishna-41837b1b8/",
   },
 
@@ -307,13 +306,56 @@ export const educatorsData = [
     name: "Sai Araveti",
     profession: "IIT Delhi | UC Berkeley | SIG",
     description:
-      "Forbes 30 Under 30, venture investor, and entrepreneur with 10+ years of experience. Obsessed with driving tech innovation, student success, and sustainable impact through creative solutions in Ed-Tech and venture capital.",
+      "Forbes 30 Under 30, venture investor, and entrepreneur with 10+ years of experience. Obsessed with driving tech innovation, student success, and sustainable impact through creative solutions in Ed-Tech.",
     quote: "Innovative Solutions, Effective Learning!",
     profileUrl: "https://www.linkedin.com/in/saiaraveti/",
   },
 ];
 
 export const jobCurriculumData = [
+  {
+    Icon: IoShieldCheckmark,
+    track: "Data & Risk Management Roles",
+    trackData: [
+      {
+        thumbnail: "/images/job-roles/2.png",
+        title: "Data Associate",
+        industries: ["Retail, Logistics", "Corporate Services"],
+        stats: [
+          {
+            subject: "2000+",
+            point: "Hired this year",
+          },
+          {
+            subject: "4.2 LPA",
+            point: "Avg Salary",
+          },
+        ],
+        companies: ["1", "2", "4"],
+        description:
+          "Provides accurate data annotation to improve AI/ML models for search accuracy and performance, ensuring high-quality customer experiences.",
+      },
+      {
+        thumbnail: "/images/job-roles/5.png",
+        title: "Transaction Risk Investigator",
+        industries: ["E-commerce, Fintech", "Financial Services"],
+        stats: [
+          {
+            subject: "1500+",
+            point: "Hired this year",
+          },
+          {
+            subject: "4.6 LPA",
+            point: "Avg Salary",
+          },
+        ],
+        companies: ["1", "20", "11"],
+        description:
+          "Investigates and eliminates e-commerce risks, ensuring safe, secure transactions by analysing data and communicating with customers and internal teams.",
+      },
+    ],
+  },
+
   {
     Icon: IoMdSettings,
     track: "Logistics & Operations Roles",
@@ -325,7 +367,7 @@ export const jobCurriculumData = [
         stats: [
           {
             subject: "3000+",
-            point: "Hiried this year",
+            point: "Hired this year",
           },
           {
             subject: "4.0 LPA",
@@ -343,7 +385,7 @@ export const jobCurriculumData = [
         stats: [
           {
             subject: "1800+",
-            point: "Hiried this year",
+            point: "Hired this year",
           },
           {
             subject: "3.8 LPA",
@@ -368,7 +410,7 @@ export const jobCurriculumData = [
         stats: [
           {
             subject: "2500+",
-            point: "Hiried this year",
+            point: "Hired this year",
           },
           {
             subject: "4.5 LPA",
@@ -386,7 +428,7 @@ export const jobCurriculumData = [
         stats: [
           {
             subject: "1300+",
-            point: "Hiried this year",
+            point: "Hired this year",
           },
           {
             subject: "4.0 LPA",
@@ -396,49 +438,6 @@ export const jobCurriculumData = [
         companies: ["16", "13", "14"],
         description:
           "Handles banking transactions, ensuring accuracy, compliance, and customer satisfaction.",
-      },
-    ],
-  },
-
-  {
-    Icon: IoShieldCheckmark,
-    track: "Data & Risk Management Roles",
-    trackData: [
-      {
-        thumbnail: "/images/job-roles/2.png",
-        title: "Data Associate",
-        industries: ["Retail, Logistics", "Corporate Services"],
-        stats: [
-          {
-            subject: "2000+",
-            point: "Hiried this year",
-          },
-          {
-            subject: "4.2 LPA",
-            point: "Avg Salary",
-          },
-        ],
-        companies: ["1", "2", "4"],
-        description:
-          "Provides accurate data annotation to improve AI/ML models for search accuracy and performance, ensuring high-quality customer experiences.",
-      },
-      {
-        thumbnail: "/images/job-roles/5.png",
-        title: "Transaction Risk Investigator",
-        industries: ["E-commerce, Fintech", "Financial Services"],
-        stats: [
-          {
-            subject: "1500+",
-            point: "Hiried this year",
-          },
-          {
-            subject: "4.6 LPA",
-            point: "Avg Salary",
-          },
-        ],
-        companies: ["1", "20", "11"],
-        description:
-          "Investigates and eliminates e-commerce risks, ensuring safe, secure transactions by analysing data and communicating with customers and internal teams.",
       },
     ],
   },
@@ -454,7 +453,7 @@ export const jobCurriculumData = [
         stats: [
           {
             subject: "2000+",
-            point: "Hiried this year",
+            point: "Hired this year",
           },
           {
             subject: "3.5 LPA",
@@ -466,13 +465,13 @@ export const jobCurriculumData = [
           "Evaluates reimbursement requests, resolves inventory issues, and ensures consistent support in a fast-paced environment.",
       },
       {
-        thumbnail: "/images/job-roles/3.png",
+        thumbnail: "/images/job-roles/10.png",
         title: "Client Relationship Associate",
         industries: ["E-commerce", "Tech Support", "Telecom"],
         stats: [
           {
             subject: "2500+",
-            point: "Hiried this year",
+            point: "Hired this year",
           },
           {
             subject: "3.8 LPA",
@@ -497,7 +496,7 @@ export const jobCurriculumData = [
         stats: [
           {
             subject: "1200+",
-            point: "Hiried this year",
+            point: "Hired this year",
           },
           {
             subject: "4.8 LPA",
@@ -516,7 +515,7 @@ export const jobCurriculumData = [
         stats: [
           {
             subject: "1500+",
-            point: "Hiried this year",
+            point: "Hired this year",
           },
           {
             subject: "5.0 LPA",
@@ -698,5 +697,189 @@ Weeks 9-12: Job-Readiness, Resume Building, Mock Interviews
           "We recommend dedicating 20-25 hours per week to complete the lessons, case studies, and projects. This ensures you stay on track to master the skills in 12 weeks.",
       },
     ],
+  },
+];
+
+export const successStoriesData = [
+  {
+    name: "John Doe",
+    review:
+      "I had the best experience working with them. We were very impressed with the quality of the service.",
+    rating: 4,
+    imagePath: "/images/success-stories/4.png",
+  },
+  {
+    name: "Jane Smith",
+    review:
+      "I had the best experience working with them. We were very impressed with the quality of the service.",
+    rating: 4,
+    imagePath: "/images/success-stories/5.png",
+  },
+  {
+    name: "Michael Johnson",
+    review:
+      "I had the best experience working with them. We were very impressed with the quality of the service.",
+    rating: 4,
+    imagePath: "/images/success-stories/5.png",
+  },
+  {
+    name: "Sarah Williams",
+    review:
+      "I had the best experience working with them. We were very impressed with the quality of the service.",
+    rating: 4,
+    imagePath: "/images/success-stories/4.png",
+  },
+
+  {
+    name: "Sarah Williams",
+    review:
+      "I had the best experience working with them. We were very impressed with the quality of the service.",
+    rating: 4,
+    imagePath: "/images/success-stories/4.png",
+  },
+];
+
+export const successStoriesNewData = [
+  {
+    name: "Nikita verma",
+    company: "Amazon",
+    designation: "Automation Analyst",
+    review:
+      "After getting placed at Amazon, I feel truly valued, especially since it’s part of FAANG. I am grateful for the opportunity and feel empowered in my role. The course and mock practices were really helpful.",
+    linkedinProfile: "https://www.linkedin.com/in/nikita--verma/",
+    profileImage: "1.png",
+  },
+
+  {
+    name: "Yash Tambe",
+    company: "AlmaBetter",
+    designation: "Business Analyst",
+    review:
+      "Grateful for the support and guidance that helped me get placed at Amazon as a Business Analyst via ISDA. Thank you very much ISDA.",
+    linkedinProfile: "https://www.linkedin.com/in/yashtambee/",
+    profileImage: "2.png",
+  },
+
+  {
+    name: "Himani Chougule",
+    company: "Amazon",
+    designation: "Automation lead",
+    // review:
+    //   "ISDA provided invaluable support, boosting my skills and confidence for the job market. Every day was a learning experience, and their guidance was crucial in helping me secure my role!",
+    review: `"I got placed at Amazon"`,
+    linkedinProfile: "https://www.linkedin.com/in/himani-chougule-915213195/",
+    profileImage: "15.png",
+    videoUrl: "https://www.youtube.com/embed/lpRbLY3UXaQ?si=sBUS_rB4x4cds0Z9",
+  },
+
+  {
+    name: "Ashish Kumar Jha",
+    company: "Glow Road by Amazon",
+    designation: "Business Intelligence Analyst",
+    // review:
+    //   "it has been a transformative experience. The well-structured curriculum, knowledgeable mentors, and hands-on projects equipped me with essential skills. ISDA's career services were invaluable, helping me refine my resume and prepare for interviews. Thrilled to be at AMAZON!",
+    review: `"ISDA got me my dream job"`,
+    linkedinProfile: "https://www.linkedin.com/in/ashishkumarjha156483/",
+    profileImage: "5.png",
+    videoUrl: "https://www.youtube.com/embed/Y-oyfbABJNM?si=LVtncjlPkEXC66NZ",
+  },
+
+  {
+    name: "Kartik Nitturkar",
+    company: "Amazon",
+    designation: "Data associate II",
+    review:
+      "I have learnt a lot of technical knowledge but also learnt the value of continuous learning and contributing meaningfully to the world around us. And I'm very grateful for having support of Lalita choudhary, Monika balkrishnan, surbi raghuvanshi from the team.",
+    linkedinProfile: "https://www.linkedin.com/in/kartik-nitturkar-0077a1244/",
+    profileImage: "3.png",
+  },
+
+  {
+    name: "Kovid Krishnan",
+    company: "Amazon",
+    designation: "AI Data Trainer",
+    review:
+      "I am immensely grateful for the opportunity to secure a job. The curriculum was comprehensive, and the practical, hands-on approach significantly enhanced my skills. Special thanks to the placement team for their unwavering support and guidance throughout the process. The dedication and resources provided were invaluable. Thank you for everything!",
+    linkedinProfile: "https://www.linkedin.com/in/kovid-krishnan-a853b649/",
+    profileImage: "7.png",
+  },
+
+  {
+    name: "DEEPAK SINGH",
+    company: "Amazon",
+    designation: "Data Associate 1 ",
+    review:
+      "I wanted to express my deepest gratitude for the incredible placement opportunity and the enriching learning journey I've experienced Thank you once again for believing in me and for being an invaluable part of my journey towards professional growth and success.",
+    linkedinProfile: "https://www.linkedin.com/in/deepak-singh-2bb9241ba/",
+    profileImage: "8.png",
+  },
+
+  {
+    name: "Md Rizwan Khan",
+    company: "Amazon",
+    designation: "Catalogue Automation Lead",
+    review:
+      "The expertise and dedication of the instructors was commendable. The platform fosters an interactive learning environment through live sessions, Q&A forums, and peer interactions. ISDA focus on career support, including mock interviews, resume building, and job placement assistance, is invaluable. It ensures that learners are not only educated but also well-prepared to enter the job market.",
+    linkedinProfile: "https://www.linkedin.com/in/md-rizwan-khan-4295b417b/",
+    profileImage: "9.png",
+  },
+
+  // {
+  //   name: "Mohammed Rafid Deshmukh",
+  //   company: "Amazon",
+  //   designation: "Automation Analyst",
+  //   review: "",
+  //   linkedinProfile: "https://www.linkedin.com/in/rafiddeshmukh/",
+  //   profileImage: "10.png",
+  // },
+
+  {
+    name: "Kushagra garg",
+    company: "Amazon",
+    designation: "Automation Analyst",
+    review:
+      "I am Kushagra Garg, and switching from mechanical engineering to a new domain was made seamless thanks to ISDA. Their guidance helped me overcome my weaknesses, making the transition smooth and helping me secure a job in my new field.",
+    linkedinProfile: "https://www.linkedin.com/in/kushagra-garg-aa0a991a0/",
+    profileImage: "11.png",
+  },
+
+  {
+    name: "Tito Varghese ",
+    company: "Amazon",
+    designation: "Automation Analyst",
+    review:
+      "The team's efforts have been pivotal in helping me secure my first real job in the field as an Automation Analyst, and I couldn't have asked for a better experience. I am profoundly thankful for their unwavering efforts, and I highly commend their commitment to helping students achieve their career aspirations. Thank you for being an integral part of my journey.",
+    linkedinProfile: "https://www.linkedin.com/in/tito-varghese/",
+    profileImage: "4.png",
+  },
+
+  {
+    name: "Kaduthuri Ram Sagar ",
+    company: "Amazon",
+    designation: "Automation Analyst",
+    review:
+      "I am thrilled to have learned essential Communication skills and advanced concepts through the comprehensive training provided by ISDA. The projects I completed under their guidance significantly deepened my understanding of the Client Interactions & Effective Presentation. This foundation has empowered me to explore even more complex topics in the field. Thank you ISDA!",
+    linkedinProfile: "https://www.linkedin.com/in/ram-kaduthuri/",
+    profileImage: "12.png",
+  },
+
+  {
+    name: "Vipul Solanki ",
+    company: "Amazon",
+    designation: "Catalog Automation Lead",
+    review:
+      "I am Vipul Solanki, and I am thrilled to share that I have been selected as a Catalog Automation Lead at Amazon. ISDA played a crucial role in this achievement. They enhanced my skills in project creation, effective communication, interview presentation and many more. The rigorous mock interviews and the dedicated placement team provided invaluable support, making the interview process seamless. Securing this role would have been incredibly challenging without their guidance and assistance.",
+    linkedinProfile: "https://www.linkedin.com/in/vipul--solanki/",
+    profileImage: "13.png",
+  },
+
+  {
+    name: "Gaurang Sahu",
+    company: "Amazon",
+    designation: "Catalogue Automation lead",
+    review:
+      "It was nice and had wonderful learning experience. I have learned so much during this time that prepared me for the job market and with insights provided by the ISDA Team. I was able to get through this interview.",
+    linkedinProfile: "https://www.linkedin.com/in/gaurang-sahu-99446a28a/",
+    profileImage: "14.png",
   },
 ];
