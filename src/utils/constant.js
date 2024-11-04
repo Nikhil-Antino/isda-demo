@@ -267,7 +267,7 @@ export const educatorsData = [
   {
     profile: "/images/educators/1.png",
     name: "Alok Anand",
-    profession: "IIIT Kharagpur | BlackBuck | American Express",
+    profession: "IIT Kharagpur | BlackBuck | American Express",
     description:
       "IIT alumnus and second-time founder with 10+ years of experience. Leader in Tech and GenAI innovation. Architect-in-Chief of high-scale ed-tech operations, delivering top learning experiences to 50k+ learners.",
     quote: "Your Growth, Our Purpose!",

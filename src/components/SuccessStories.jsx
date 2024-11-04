@@ -104,7 +104,7 @@ function SuccessStories() {
             paginationLayout="flex items-center gap-x-[12px] col-span-8 md:col-span-2 place-self-center justify-center"
           >
             {successStoriesNewData
-              .slice(6, successStoriesNewData.length)
+              .slice(7, successStoriesNewData.length)
               .map((successStory, index) => (
                 <WallCard key={index} {...successStory} />
               ))}
