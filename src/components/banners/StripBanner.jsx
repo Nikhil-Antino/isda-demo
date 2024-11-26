@@ -9,8 +9,8 @@ function StripBanner() {
       <div className="flex items-center gap-x-2">
         <GoStopwatch size={32} className="text-red-500 animate-bounce" />
         <p className="text-base md:text-lg font-semibold inline-block w-fit">
-          Next Batch starts on: <span className="text-red-500">25th</span>{" "}
-          November.{" "}
+          Next Batch starts on: <span className="text-red-500">23rd</span>{" "}
+          December.{" "}
           <span className="hidden md:inline-block">
             Take the First Step Today.
           </span>

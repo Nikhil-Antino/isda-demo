@@ -11,7 +11,7 @@ import { IoWalletSharp } from "react-icons/io5";
 const chipsData = [
   {
     point: "Next Batch Starts",
-    subject: "25 Nov, 2024",
+    subject: "23 Dec, 2024",
     Icon: FaCalendarDays,
   },
   {
